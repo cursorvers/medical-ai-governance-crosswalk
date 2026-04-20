@@ -147,9 +147,9 @@ title: Home
       <h2 id="evidence-pack-title">根拠パック — 一次資料への導線</h2>
       <p>このサイトは LLM の生成回答ではなく、公開ガイドライン一次資料への導線です。以下は Markdown テンプレート、CC-BY 4.0 で改変・再配布可能。</p>
       <ul class="gl-evidence-list">
-        <li><a href="evidence/clinician-ai-product-evaluation.md">臨床AI製品導入評価チェックリスト</a></li>
-        <li><a href="evidence/patient-ai-intervention-explanation.md">患者AI介入説明文テンプレ</a></li>
-        <li><a href="evidence/hospital-ai-adoption-policy.md">病院AI導入ポリシー骨子</a></li>
+        <li><a href="evidence/clinical-ai-product-evaluation.md">臨床AI製品導入評価チェックリスト</a></li>
+        <li><a href="evidence/patient-explanation-support.md">患者説明サポート資料</a></li>
+        <li><a href="evidence/hospital-ai-policy-skeleton.md">病院AI導入ポリシー骨子</a></li>
         <li><a href="evidence/irb-question-checklist.md">IRB質問チェックリスト</a></li>
         <li><a href="evidence/pccp-skeleton.md">PCCP骨子</a></li>
       </ul>
