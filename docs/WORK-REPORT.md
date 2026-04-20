@@ -190,7 +190,7 @@ GLM (429 Fair Usage) / Gemini (cap 超過) / Cursor (`@anysphere/file-service-da
 - 未達: AC6 Copilot cross-check (S1 で解消可能)
 
 **次のユーザー承認 (/vote) が必要な操作**:
-- GitHub remote push (origin: cursorvers-inc/medical-ai-governance-crosswalk)
+- GitHub remote push (origin: cursorvers/medical-ai-governance-crosswalk)
 - gh-pages deploy
 - X 告知文投稿
 

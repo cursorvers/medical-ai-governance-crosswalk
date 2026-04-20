@@ -1,7 +1,7 @@
 site_name: Medical AI Governance Crosswalk
 docs_dir: docs
 site_dir: public
-site_url: https://cursorvers-inc.github.io/medical-ai-governance-crosswalk/
+site_url: https://cursorvers.github.io/medical-ai-governance-crosswalk/
 theme:
   name: material
   language: ja

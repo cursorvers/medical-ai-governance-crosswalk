@@ -16,7 +16,7 @@
             "published_date": "2024-07-12",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:pending-2026-04-20",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "ai-act",
                 "eu",
@@ -191,7 +191,7 @@
             "published_date": "2021-01-12",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:bca81a98373c803b4c83f9ac3d26a438bc468a2343ab5c1f6b83a791e081c2dc",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "samd",
                 "aiml",
@@ -359,7 +359,7 @@
             "published_date": "2017-09-21",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:287df25325df4bc53fe0713889cb738b203881c23cd83b2f69aeeafb24538204",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "imdrf",
                 "samd",
@@ -566,7 +566,7 @@
             "published_date": "2023-12-01",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:pending-2026-04-20",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "iso",
                 "iec",
@@ -750,7 +750,7 @@
             "published_date": "2026-04-15",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:0bdb7e3dd8281dabcde80c669506a9509dcb02db664f65cf6ae4b0e5cb898f99",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "jma",
                 "jp",
@@ -941,7 +941,7 @@
             "published_date": "2026-03-31",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:0ed456065a0e97b5d45f30c02b10cc02d63a9408de4f8f6b666e3b7c96ce6286",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "meti",
                 "jp",
@@ -1132,7 +1132,7 @@
             "published_date": "2023-03-31",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:b6115cb14368e311237489b3d96fc432196d8607440de0351a20d1e75c446f7b",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "samd",
                 "jp",
@@ -1321,7 +1321,7 @@
             "published_date": "2023-01-26",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:3802da9d1947166deca3e1f5abc4e74314549ae9abc82271692fe8b9ee4fffc5",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "nist",
                 "ai-rmf",
@@ -1512,7 +1512,7 @@
             "published_date": "2026-04-06",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:9ebdf65034e2ffe0485a7c28ac46e8be21f5977dd71f4e6e0cae4b7ef0178ae5",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "samd",
                 "jp",
@@ -1701,7 +1701,7 @@
             "published_date": "2021-06-28",
             "last_reviewed": "2026-04-20",
             "source_hash": "sha256:dc5697ab8ba83b0ab42232da6e85f1dd41eb4fab9d112deaedfa97458a8cdfb1",
-            "maintainer": "cursorvers-inc/medai",
+            "maintainer": "cursorvers/medai",
             "tags": [
                 "who",
                 "ai-health",

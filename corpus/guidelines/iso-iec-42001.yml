@@ -9,7 +9,7 @@ version: "2023"
 published_date: 2023-12-01
 last_reviewed: 2026-04-20
 source_hash: sha256:pending-2026-04-20
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags:
   - iso
   - iec

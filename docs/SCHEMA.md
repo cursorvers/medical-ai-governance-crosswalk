@@ -16,7 +16,7 @@ version: "2024.4"                      # ガイドライン側のバージョン
 published_date: 2024-04-01
 last_reviewed: 2026-04-20              # 本資料側のレビュー日
 source_hash: sha256:...                # 原文取得時のhash (可能なら)
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags: [samd, jp, regulatory]
 
 summary_ja: |

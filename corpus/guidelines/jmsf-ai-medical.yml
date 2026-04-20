@@ -9,7 +9,7 @@ version: "2026.04.15"
 published_date: 2026-04-15
 last_reviewed: 2026-04-20
 source_hash: sha256:0bdb7e3dd8281dabcde80c669506a9509dcb02db664f65cf6ae4b0e5cb898f99
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags:
   - jma
   - jp

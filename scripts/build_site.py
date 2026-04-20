@@ -30,7 +30,7 @@ DISCLAIMER = (
 )
 LICENSE_FOOTER = """---
 
-**License / 引用スコープ**: 本サイトのオリジナル編集物 (マトリクス構造・要求強度判定・列定義・要約) は CC-BY 4.0。第三者ガイドライン原文の引用は各権利者帰属 (fair use / 著作権法第32条「引用」の範囲) で、CC-BY 対象外。詳細は [LICENSE](https://github.com/cursorvers-inc/medical-ai-governance-crosswalk/blob/main/LICENSE) 参照。"""
+**License / 引用スコープ**: 本サイトのオリジナル編集物 (マトリクス構造・要求強度判定・列定義・要約) は CC-BY 4.0。第三者ガイドライン原文の引用は各権利者帰属 (fair use / 著作権法第32条「引用」の範囲) で、CC-BY 対象外。詳細は [LICENSE](https://github.com/cursorvers/medical-ai-governance-crosswalk/blob/main/LICENSE) 参照。"""
 REQ_ICON = {
     "must": "🔴",
     "should": "🟠",
@@ -302,7 +302,7 @@ def render_site(columns: list[dict[str, Any]], guidelines: list[dict[str, Any]])
                 "title_ja": spec["title_ja"],
                 "audience_ja": spec["audience_ja"],
                 "use_case_ja": spec["use_case_ja"],
-                "url": f"https://cursorvers-inc.github.io/medical-ai-governance-crosswalk/evidence/{output_filename}",
+                "url": f"https://cursorvers.github.io/medical-ai-governance-crosswalk/evidence/{output_filename}",
                 "repo_path": f"build/evidence/{output_filename}",
             }
         )
@@ -348,7 +348,7 @@ def render_site(columns: list[dict[str, Any]], guidelines: list[dict[str, Any]])
         "site_name": "Medical AI Governance Crosswalk",
         "docs_dir": "docs",
         "site_dir": "public",
-        "site_url": "https://cursorvers-inc.github.io/medical-ai-governance-crosswalk/",
+        "site_url": "https://cursorvers.github.io/medical-ai-governance-crosswalk/",
         "theme": {"name": "material", "language": "ja"},
         "plugins": ["search"],
         "extra_css": ["assets/lookup.css"],

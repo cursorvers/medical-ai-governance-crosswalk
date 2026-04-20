@@ -9,7 +9,7 @@ version: "N10/N12/N23/N41 + UDI N48 reference"
 published_date: 2017-09-21
 last_reviewed: 2026-04-20
 source_hash: sha256:287df25325df4bc53fe0713889cb738b203881c23cd83b2f69aeeafb24538204
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags:
   - imdrf
   - samd

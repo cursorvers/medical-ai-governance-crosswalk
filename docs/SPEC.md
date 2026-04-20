@@ -82,7 +82,7 @@ const cell = medicalGuidelines["fda-aiml-saamd-ap"].cells.G satisfies GuideScope
 
 ## 4. 配布
 
-- **GitHub Repo**: `cursorvers-inc/medical-ai-governance-crosswalk` (CC-BY-4.0)
+- **GitHub Repo**: `cursorvers/medical-ai-governance-crosswalk` (CC-BY-4.0)
 - **Static site**: GitHub Pages (mkdocs-material theme)
 - **GuideScope integration**: Phase 2 で `@cursorversinc/guidescope-medical-corpus` として publish し、GuideScope 本体へ corpus として組み込む
 - **告知**: X (yu_sh02084 の波に乗せる) / note / Zenn / Qiita / Medical Tribune 寄稿打診
@@ -148,7 +148,7 @@ const cell = medicalGuidelines["fda-aiml-saamd-ap"].cells.G satisfies GuideScope
 
 ## 10. 承認境界 (/vote 必須)
 
-- GitHub remote push (cursorvers-inc org への push)
+- GitHub remote push (cursorvers org への push)
 - npm publish (`@cursorversinc/guidescope-medical-corpus`)
 - Medical Tribune など外部寄稿の送信
 - 破壊的 Git 操作

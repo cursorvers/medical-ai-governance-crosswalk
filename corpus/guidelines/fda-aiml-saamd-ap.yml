@@ -9,7 +9,7 @@ version: "2025.08"
 published_date: 2021-01-12
 last_reviewed: 2026-04-20
 source_hash: sha256:bca81a98373c803b4c83f9ac3d26a438bc468a2343ab5c1f6b83a791e081c2dc
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags: [samd, aiml, fda, pccp, medical-device, regulatory]
 summary_ja: |
   FDAのAI/ML SaMD監督方針とPCCP提出推奨を整理し、TPLC・透明性・性能監視を示す。

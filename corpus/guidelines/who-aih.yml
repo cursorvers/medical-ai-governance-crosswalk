@@ -9,7 +9,7 @@ version: "2021 guidance + 2023 LLM update + 2024/2025 LMM guidance"
 published_date: 2021-06-28
 last_reviewed: 2026-04-20
 source_hash: sha256:dc5697ab8ba83b0ab42232da6e85f1dd41eb4fab9d112deaedfa97458a8cdfb1
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags:
   - who
   - ai-health

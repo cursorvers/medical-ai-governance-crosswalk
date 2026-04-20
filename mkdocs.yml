@@ -1,8 +1,8 @@
 site_name: Medical AI Governance Crosswalk
 site_description: Medical AI governance guideline crosswalk with cited requirement levels.
-site_url: https://cursorvers-inc.github.io/medical-ai-governance-crosswalk/
-repo_name: cursorvers-inc/medical-ai-governance-crosswalk
-repo_url: https://github.com/cursorvers-inc/medical-ai-governance-crosswalk
+site_url: https://cursorvers.github.io/medical-ai-governance-crosswalk/
+repo_name: cursorvers/medical-ai-governance-crosswalk
+repo_url: https://github.com/cursorvers/medical-ai-governance-crosswalk
 
 theme:
   name: material

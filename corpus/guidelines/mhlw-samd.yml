@@ -9,7 +9,7 @@ version: "2023-03-31 partial revision"
 published_date: 2023-03-31
 last_reviewed: 2026-04-20
 source_hash: sha256:b6115cb14368e311237489b3d96fc432196d8607440de0351a20d1e75c446f7b
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags:
   - samd
   - jp

@@ -9,7 +9,7 @@ version: "2024.07"
 published_date: 2024-07-12
 last_reviewed: 2026-04-20
 source_hash: sha256:pending-2026-04-20
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags: [ai-act, eu, high-risk-ai, medical-device, regulatory]
 source_notes:
   - title: Regulation (EU) 2024/1689

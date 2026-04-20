@@ -9,7 +9,7 @@ version: "AI RMF 1.0 + NIST AI 600-1"
 published_date: 2023-01-26
 last_reviewed: 2026-04-20
 source_hash: sha256:3802da9d1947166deca3e1f5abc4e74314549ae9abc82271692fe8b9ee4fffc5
-maintainer: cursorvers-inc/medai
+maintainer: cursorvers/medai
 tags:
   - nist
   - ai-rmf
