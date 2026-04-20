@@ -87,12 +87,50 @@ python3 -m venv .venv
 - セル更新 PR は **原文URL + 節/段落番号 + 取得日 + 信頼度** が必須 ([CONTRIBUTING.md](CONTRIBUTING.md))
 - ガイドライン追加リクエストは Issue で
 
+## 配布サーフェス (v0.1)
+
+単一の `corpus/*.yml` SSOT から 4 つの利用面を生成しています。
+
+| Surface | パッケージ | 用途 |
+|---------|-----------|------|
+| Web LP | (静的サイト) | 外来・院内検討で 30 秒で論点を引く |
+| npm corpus | `@cursorversinc/guidescope-medical-corpus` | 自前ツール組込用 JSON コーパス |
+| CLI | `@cursorversinc/medgov-cli` | ターミナルで `medgov "<query>"` |
+| MCP server | `@cursorversinc/medgov-mcp` | Claude Desktop / Cursor から呼べる引用付き検索 |
+
+### CLI
+
+```bash
+npm i -g @cursorversinc/medgov-cli
+medgov "Human oversight"
+medgov --list-columns
+medgov "PCCP" --json
+```
+
+### MCP (Claude Desktop / Cursor)
+
+`claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "medgov": {
+      "command": "npx",
+      "args": ["-y", "@cursorversinc/medgov-mcp"]
+    }
+  }
+}
+```
+
+Tools: `search_medical_governance` / `get_column` / `get_guideline` / `list_guidelines` / `list_columns`。
+すべて引用 URL + 節/段落番号 + 信頼度ラベル付きで返します。LLM 生成回答ではなく原文への入口です。
+
 ## ロードマップ
 
-- Phase 1 (本リポ): 静的サイト + TOP 10 ガイドライン + 使う側向け Evidence Pack
-- Phase 2: npm package `@cursorversinc/guidescope-medical-corpus` として publish し、GuideScope 本体へ医療 corpus として組み込み
+- Phase 1 (完了): 静的サイト + 10 ガイドライン × 13 列 corpus + Evidence Pack + npm corpus / CLI / MCP の 4 サーフェス
+- Phase 2: 月次 source-freshness CI で原文 drift を Issue 自動起票、信頼度 low セル (現 16%) を peer review で漸減
+- Phase 3: GuideScope 本体への医療ドメイン統合 (corpus interface 互換)
 
 ## 関連プロダクト
 
 - [GuideScope MCP](https://cursorvers.jp/tools/guidescope/) — 生成AI国内ガイドライン検索 (Cursorvers 本家プロダクト)
-- 本資料は GuideScope の **医療ドメイン拡張コーパス** として将来統合予定。独自 MCP server は作らず、GuideScope 本体の検索・citation interface と互換な corpus package として連携します。

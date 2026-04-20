@@ -113,14 +113,16 @@ def with_license_footer(content: str) -> str:
 
 
 def copy_lookup_assets() -> None:
-    DOCS_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
-    PUBLIC_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
-    for name in ("lookup.js", "lookup.css"):
-        source = ASSET_SOURCE_DIR / name
-        if not source.exists():
-            raise FileNotFoundError(f"missing lookup asset: {source}")
-        shutil.copy2(source, DOCS_ASSETS_DIR / name)
-        shutil.copy2(source, PUBLIC_ASSETS_DIR / name)
+    # DISABLED: Do NOT copy lookup assets - canonical versions live at site/docs/assets/
+    # and mkdocs build copies from DOCS_ASSETS_DIR to PUBLIC_ASSETS_DIR automatically
+    pass
+    # PUBLIC_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+    # for name in ("lookup.js", "lookup.css"):
+    #     source = ASSET_SOURCE_DIR / name
+    #     if not source.exists():
+    #         raise FileNotFoundError(f"missing lookup asset: {source}")
+    #     # shutil.copy2(source, DOCS_ASSETS_DIR / name)  # DISABLED - canonical files preserved
+    #     # shutil.copy2(source, PUBLIC_ASSETS_DIR / name)  # DISABLED - mkdocs copies from DOCS
 
 
 def generate_lookup_index_assets() -> None:
@@ -132,9 +134,21 @@ def generate_lookup_index_assets() -> None:
 
 
 def render_site(columns: list[dict[str, Any]], guidelines: list[dict[str, Any]]) -> None:
-    if DOCS_DIR.exists():
-        shutil.rmtree(DOCS_DIR)
+    # Selective cleanup - only delete files this script regenerates
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    
+    # Delete specific files that this script regenerates (excluding index.md)
+    for filename in ["matrix.md", "columns.md", "evidence.md"]:
+        file_path = DOCS_DIR / filename
+        if file_path.exists():
+            file_path.unlink()
+    
+    # Delete and recreate guidelines directory
+    guidelines_dir = DOCS_DIR / "guidelines"
+    if guidelines_dir.exists():
+        shutil.rmtree(guidelines_dir)
+    
+    # Do NOT touch assets directory at all - only specific files will be written by copy functions
     (DOCS_DIR / "guidelines").mkdir(parents=True, exist_ok=True)
 
     env = Environment(undefined=StrictUndefined, autoescape=False, trim_blocks=True)
@@ -146,49 +160,7 @@ def render_site(columns: list[dict[str, Any]], guidelines: list[dict[str, Any]])
         disclaimer=DISCLAIMER,
     )
 
-    index_t = env.from_string(
-        """# Medical AI Governance Crosswalk
-
-> **DISCLAIMER**: {{ disclaimer }}
-
-<div id="gl-lookup">
-  <input type="text" id="gl-query" placeholder="例: IRBで何を聞かれる?" aria-label="ガイドライン論点検索">
-  <div id="gl-results"></div>
-</div>
-<script src="assets/lookup.js"></script>
-
-## 3レイヤー地図
-
-| レイヤー | 論点 |
-|---|---|
-| 規制・責任 | {% for c in columns if c.layer == "regulatory" %}{{ c.id }} {{ c.name_ja }}{% if not loop.last %}<br>{% endif %}{% endfor %} |
-| 研究・評価 | {% for c in columns if c.layer == "research" %}{{ c.id }} {{ c.name_ja }}{% if not loop.last %}<br>{% endif %}{% endfor %} |
-| 運用・ライフサイクル | {% for c in columns if c.layer in ["operations", "lifecycle"] %}{{ c.id }} {{ c.name_ja }}{% if not loop.last %}<br>{% endif %}{% endfor %} |
-
-## 概要
-
-臨床医・臨床研究者・医療機関 (医療安全/IT/IRB事務局) が、主要ガイドラインを13論点で横断確認するための引用付き資料です。SaMD製造者の承認申請支援は対象外です。
-
-## 収録ガイドライン
-
-{% for g in guidelines -%}
-- [{{ g.name_ja }}](guidelines/{{ g.id }}.md) ({{ g.issuer }})
-{% endfor %}
-
-## 読み方
-
-- `must`: 明示的な要求または強い義務
-- `should`: 推奨、原則、実施すべき事項
-- `mention`: 言及あり
-- `none`: 扱いなし
-- `not_assessed`: 未評価
-- `source_unavailable`: 出典確認不可
-"""
-    )
-    write(
-        DOCS_DIR / "index.md",
-        with_license_footer(index_t.render(columns=columns, guidelines=guidelines)),
-    )
+    # DO NOT regenerate index.md - the manual landing page is canonical
 
     matrix_lines = [
         "# 13列マトリクス",
@@ -344,28 +316,29 @@ def render_site(columns: list[dict[str, Any]], guidelines: list[dict[str, Any]])
     copy_lookup_assets()
     generate_lookup_index_assets()
 
-    mkdocs_yml = {
-        "site_name": "Medical AI Governance Crosswalk",
-        "docs_dir": "docs",
-        "site_dir": "public",
-        "site_url": "https://cursorvers.github.io/medical-ai-governance-crosswalk/",
-        "theme": {"name": "material", "language": "ja"},
-        "plugins": ["search"],
-        "extra_css": ["assets/lookup.css"],
-        "hooks": ["../scripts/mkdocs_hooks.py"],
-        "nav": [
-            {"Home": "index.md"},
-            {"Matrix": "matrix.md"},
-            {"Evidence": "evidence.md"},
-            {"Columns": "columns.md"},
-            {
-                "Guidelines": [
-                    {g["name_ja"]: f"guidelines/{g['id']}.md"} for g in guidelines
-                ]
-            },
-        ],
-    }
-    write(SITE_DIR / "mkdocs.yml", yaml.safe_dump(mkdocs_yml, sort_keys=False, allow_unicode=True))
+    # DISABLED: mkdocs.yml generation - canonical file at site/mkdocs.yml is manually maintained
+    # mkdocs_yml = {
+    #     "site_name": "Medical AI Governance Crosswalk",
+    #     "docs_dir": "docs",
+    #     "site_dir": "public",
+    #     "site_url": "https://cursorvers.github.io/medical-ai-governance-crosswalk/",
+    #     "theme": {"name": "material", "language": "ja"},
+    #     "plugins": ["search"],
+    #     "extra_css": ["assets/lookup.css"],
+    #     "hooks": ["../scripts/mkdocs_hooks.py"],
+    #     "nav": [
+    #         {"Home": "index.md"},
+    #         {"Matrix": "matrix.md"},
+    #         {"Evidence": "evidence.md"},
+    #         {"Columns": "columns.md"},
+    #         {
+    #             "Guidelines": [
+    #                 {g["name_ja"]: f"guidelines/{g['id']}.md"} for g in guidelines
+    #             ]
+    #         },
+    #     ],
+    # }
+    # write(SITE_DIR / "mkdocs.yml", yaml.safe_dump(mkdocs_yml, sort_keys=False, allow_unicode=True))
 
 
 def main() -> int:
