@@ -8,19 +8,19 @@ title: Home
     <div class="gl-lp-inner gl-hero-grid">
       <div class="gl-hero-copy">
         <p class="gl-eyebrow">医療AI 公開ガイドライン 10本×13論点</p>
-        <h1 id="gl-hero-title">「このAI、大丈夫？」と患者に聞かれたら。<br>公開ガイドラインのエビデンスを、外来でそのまま示す。</h1>
-        <p class="gl-hero-subcopy">医療AI公開ガイドライン10本の本文URLを直リンク提示する静的検索。<br>LLMの生成回答ではなく、一次資料への導線だけを返します。</p>
+        <h1 id="gl-hero-title">「このAI、うちで使って大丈夫？」<br>そう迷ったら、公開ガイドラインで確かめる。</h1>
+        <p class="gl-hero-subcopy">医療AI公開ガイドライン10本の本文URLを13論点で横断検索。<br>LLMの生成回答ではなく、一次資料への導線だけを返します。</p>
       </div>
 
       <div class="gl-hero-search" aria-label="ガイドライン検索">
         <p class="gl-search-label">患者説明・院内検討・研究申請の論点を引く</p>
         <div id="gl-lookup">
-          <input type="text" id="gl-query" placeholder="例: このAIは安全？ 間違えたら誰の責任？" aria-label="医療AIガイドライン論点検索">
+          <input type="text" id="gl-query" placeholder="例: うちで使って大丈夫？ 承認は取れている？" aria-label="医療AIガイドライン論点検索">
           <div class="gl-suggest" aria-label="検索候補">
-            <button class="gl-suggest-btn" type="button" data-query="安全性">このAIは安全？</button>
-            <button class="gl-suggest-btn" type="button" data-query="責任主体">間違えたら誰の責任？</button>
-            <button class="gl-suggest-btn" type="button" data-query="説明責任">なぜその判断？</button>
-            <button class="gl-suggest-btn" type="button" data-query="バイアス">偏りはある？</button>
+            <button class="gl-suggest-btn" type="button" data-query="安全性">うちで使って問題ない？</button>
+            <button class="gl-suggest-btn" type="button" data-query="責任主体">承認は取れている？</button>
+            <button class="gl-suggest-btn" type="button" data-query="説明責任">判断根拠は示せる？</button>
+            <button class="gl-suggest-btn" type="button" data-query="バイアス">患者背景に偏りは？</button>
           </div>
           <div id="gl-results"></div>
         </div>
@@ -39,23 +39,23 @@ title: Home
         <span class="gl-icon gl-icon-stethoscope" aria-hidden="true"></span>
         <div>
           <p class="gl-kicker">臨床医向け</p>
-          <h2 id="clinical-now-title">外来で今すぐ引く</h2>
+          <h2 id="clinical-now-title">導入の前に、自分で確かめる</h2>
         </div>
       </div>
       <div class="gl-usecase-grid">
         <button class="gl-usecase-card gl-suggest-btn" type="button" data-query="安全性">
-          <span>患者から聞かれたら</span>
-          <strong>このAIは安全なんですか？</strong>
+          <span>導入を検討するとき</span>
+          <strong>このAI、自分の臨床で使って大丈夫？</strong>
           <small>安全性・臨床評価・Human oversight を横断します。</small>
         </button>
         <button class="gl-usecase-card gl-suggest-btn" type="button" data-query="説明責任">
-          <span>説明が必要なら</span>
-          <strong>誰が責任を持って説明しますか？</strong>
+          <span>判断根拠に迷ったら</span>
+          <strong>なぜその結果になったか、説明できる？</strong>
           <small>説明責任・透明性・責任主体を確認します。</small>
         </button>
         <button class="gl-usecase-card gl-suggest-btn" type="button" data-query="バイアス">
-          <span>不公平が心配なら</span>
-          <strong>患者背景で性能差はありますか？</strong>
+          <span>適用範囲が気になったら</span>
+          <strong>うちの患者層でも性能は保たれる？</strong>
           <small>データ品質・バイアス・同意プライバシーを探します。</small>
         </button>
       </div>
