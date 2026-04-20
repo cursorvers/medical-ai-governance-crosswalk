@@ -126,6 +126,8 @@ def copy_lookup_assets() -> None:
 
 
 def generate_lookup_index_assets() -> None:
+    DOCS_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+    PUBLIC_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     index = build_lookup_index(DOCS_ASSETS_DIR / "lookup-index.json")
     shutil.copy2(DOCS_ASSETS_DIR / "lookup-index.json", PUBLIC_ASSETS_DIR / "lookup-index.json")
     cell_count = sum(len(column["cells"]) for column in index["columns"].values())
