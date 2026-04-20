@@ -47,16 +47,23 @@
     });
   }
 
-  fetch("assets/lookup-index.json").then((r) => r.json()).then((data) => {
+  const scriptEl = document.currentScript || document.querySelector('script[src*="lookup.js"]');
+  const indexUrl = scriptEl ? new URL('lookup-index.json', scriptEl.src).href : 'assets/lookup-index.json';
+  fetch(indexUrl, { cache: 'no-cache' }).then((r) => {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }).then((data) => {
     index = data;
     emptyState();
-    input.addEventListener("input", () => search(input.value));
+    input.addEventListener('input', () => search(input.value));
     wireSuggestButtons();
-    out.addEventListener("click", (e) => {
+    out.addEventListener('click', (e) => {
       if (e.target.dataset && e.target.dataset.col) {
         input.value = e.target.textContent;
         out.innerHTML = renderColumn(e.target.dataset.col);
       }
     });
-  }).catch(() => { out.innerHTML = '<p class="gl-empty">検索インデックスを読み込めませんでした。</p>'; });
+  }).catch((err) => {
+    out.innerHTML = '<p class="gl-empty">検索インデックスを読み込めませんでした (' + esc(String(err && err.message || err)) + ')。ブラウザを再読込してください (Cmd+Shift+R)。</p>';
+  });
 })();
