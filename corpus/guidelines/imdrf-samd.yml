@@ -1,0 +1,181 @@
+id: imdrf-samd
+name_ja: IMDRF SaMD作業部会文書
+name_en: IMDRF Software as a Medical Device Working Group documents
+issuer: International Medical Device Regulators Forum
+jurisdiction: international
+type: regulatory_guidance
+url: https://www.imdrf.org/working-groups/software-medical-device-samd
+version: "N10/N12/N23/N41 + UDI N48 reference"
+published_date: 2017-09-21
+last_reviewed: 2026-04-20
+source_hash: sha256:287df25325df4bc53fe0713889cb738b203881c23cd83b2f69aeeafb24538204
+maintainer: cursorvers-inc/medai
+tags:
+  - imdrf
+  - samd
+  - medical-device
+  - regulatory-guidance
+source_documents:
+  - url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-131209-samd-key-definitions-140901.pdf
+    code: IMDRF/SaMD WG/N10FINAL:2013
+    pdf_sha256: 1c9a15ef83f8e7987f6484c59e0775102e9bd74ab97f21dcfa4266b951ac42ff
+  - url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-140918-samd-framework-risk-categorization-141013.pdf
+    code: IMDRF/SaMD WG/N12FINAL:2014
+    pdf_sha256: f9335eba6f94d2d058126708c782e306e557e7dd5bdae4a784d51f83d6c05d8d
+  - url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf
+    code: IMDRF/SaMD WG/N23FINAL:2015
+    pdf_sha256: 38324b33e16772dfc536c42f3c70ca871e4f3d58118ac8d17ea1a6f583466baa
+  - url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf
+    code: IMDRF/SaMD WG/N41FINAL:2017
+    pdf_sha256: a7ff6d79aa9bfd723c952f52f2279cfc1b0416c8fff72e9905501db6af367c02
+  - url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-190321-udi-sag.pdf
+    code: IMDRF/UDI WG/N48FINAL:2019
+    note_ja: SaMD作業部会文書ではなくUDI適用ガイド。SaMDのUDI例を含むため参照。
+    pdf_sha256: 8ebd4e3071477170723ae08e397c4324400420f536c280d213c5383d8c274a68
+
+summary_ja: >
+  IMDRFのSaMD定義、リスク分類、QMS、臨床評価、UDI参照をまとめた国際規制調和文書群。
+
+cells:
+  - column: A
+    requirement: should
+    summary_ja: ハードウェアに属さず医療目的を果たすソフトをSaMDと定義。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-131209-samd-key-definitions-140901.pdf
+      section: "N10 Section 5.1 Software as a Medical Device"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      汎用プラットフォーム上で動く医療目的ソフト、IVD、モバイルアプリも定義に含まれる。
+
+  - column: B
+    requirement: should
+    summary_ja: 医療判断への寄与と状態重大性でIからIVに分類する。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-140918-samd-framework-risk-categorization-141013.pdf
+      section: "N12 Sections 7.1-7.3"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      Category IVが最高影響、Category Iが最低影響。規制分類そのものではない。
+
+  - column: C
+    requirement: mention
+    summary_ja: 定義文、使用目的、表示・利用情報の明確化に言及する。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-131209-samd-key-definitions-140901.pdf
+      section: "N10 Sections 5.4-5.5"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      透明性一般ではなく、SaMD定義文、意図用途、ラベル・使用説明の情報に関する言及。
+
+  - column: D
+    requirement: should
+    summary_ja: 文書管理、記録管理、構成追跡でトレーサビリティを保つ。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf
+      section: "N23 Sections 7.4-7.5"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      監査ログという語ではないが、文書・記録・構成・苦情等の追跡可能性を扱う。
+
+  - column: E
+    requirement: mention
+    summary_ja: ユーザーリスク、使用環境、使用者支援への考慮に言及。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf
+      section: "N23 Sections 7.3; 8.5"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      人間監督義務としては明示されず、ユーザーリスクと意図使用の考慮にとどまる。
+
+  - column: F
+    requirement: should
+    summary_ja: データ完全性、臨床データ品質、妥当性の確保を求める。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf
+      section: "N41 Sections 6.0-7.0"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      N23はデータ完全性、N41は臨床評価エビデンスの品質・関連性を扱う。
+
+  - column: G
+    requirement: should
+    summary_ja: 変更影響評価と市販後実性能データの継続監視を求める。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf
+      section: "N41 Sections 8.3-8.4"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      PCCPという用語ではないが、変更、市販後情報、継続学習、実世界性能監視を扱う。
+
+  - column: H
+    requirement: should
+    summary_ja: SaMD製造者が品質、リスク、ライフサイクル管理を担う。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf
+      section: "N23 Sections 6.0-7.0"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      組織リーダーシップ、説明責任、ガバナンス、資源提供をQMSの基盤に置く。
+
+  - column: I
+    requirement: should
+    summary_ja: 患者データ等の機密性と安全な保管・廃棄を考慮する。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf
+      section: "N23 Sections 8.2; 8.6"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      同意手続ではなく、機微データ、患者情報、機密データの保護に関するQMS考慮。
+
+  - column: J
+    requirement: should
+    summary_ja: 情報セキュリティ、脅威分析、脆弱性対策を安全と統合する。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf
+      section: "N23 Sections 7.3; 8.3; 8.6"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      侵入検知、ペネトレーションテスト、脆弱性スキャン、データ完全性試験に言及。
+
+  - column: K
+    requirement: should
+    summary_ja: 臨床関連性、分析妥当性、臨床妥当性の三要素で評価する。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf
+      section: "N41 Sections 5.0-7.0"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      SaMDの安全性、有効性、性能を示す臨床評価の収束的アプローチを定義。
+
+  - column: L
+    requirement: should
+    summary_ja: 各国規制当局のSaMD用語・管理原則の収束を目的とする。
+    citation:
+      url: https://www.imdrf.org/working-groups/software-medical-device-samd
+      section: "Working Group charter"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      国際的な共通語彙、リスク分類、QMS、臨床評価原則の整合を狙う。
+
+  - column: M
+    requirement: should
+    summary_ja: 計画、開発、検証、展開、保守、廃止までQMSで管理する。
+    citation:
+      url: https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf
+      section: "N23 Sections 7.0-8.6"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      ライフサイクル支援プロセスと実現・使用プロセスをSaMD全体に適用する。

@@ -1,0 +1,174 @@
+id: jmsf-ai-medical
+name_ja: 日本医師会 AIの臨床利用答申
+name_en: Japan Medical Association report on clinical use of AI and bioethics
+issuer: 日本医師会
+jurisdiction: jp
+type: professional_guideline
+url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf
+version: "2026.04.15"
+published_date: 2026-04-15
+last_reviewed: 2026-04-20
+source_hash: sha256:0bdb7e3dd8281dabcde80c669506a9509dcb02db664f65cf6ae4b0e5cb898f99
+maintainer: cursorvers-inc/medai
+tags:
+  - jma
+  - jp
+  - professional-guideline
+  - clinical-ai
+  - bioethics
+source_notes:
+  - title: AIに関する臨床的課題と生命倫理について
+    url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf
+    published_date: 2026-04-15
+    retrieved: 2026-04-20
+    pdf_pages: 99
+    pdf_sha256: 0bdb7e3dd8281dabcde80c669506a9509dcb02db664f65cf6ae4b0e5cb898f99
+    note_ja: >
+      PDF目次を抽出し、章番号・ページ単位で確認。セル単位の要求強度は薬事要求ではなく専門職倫理答申として保守的に判定。
+
+summary_ja: >
+  日本医師会のAI臨床利用に関する答申。医師主導、人間中心、情報管理、責任、生命倫理上の課題を整理する。
+
+cells:
+  - column: A
+    requirement: mention
+    summary_ja: 医療AIの臨床利用全般と医師・患者・AIの関係を対象にする。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=1
+      section: "第1章 総論：医療AIの現状と課題"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      答申全体の対象は臨床利用・生命倫理であり、規制上の適用範囲定義ではない。
+
+  - column: B
+    requirement: mention
+    summary_ja: 臨床利用を3類型に分け、悪用や制度的リスクも整理する。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=68
+      section: "第3章 3.3.1 AIの臨床利用の3類型"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      要確認: 形式的なリスク分類表ではなく、倫理論点整理としての分類。
+
+  - column: C
+    requirement: should
+    summary_ja: AI使用の患者通知、透明性措置、医師確認を重視する。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=69
+      section: "第3章 3.3.2 記録・文書作成の補助"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      AI使用の患者への通知、臨床医による確認、元データ保存が対策として挙げられる。
+
+  - column: D
+    requirement: mention
+    summary_ja: エラー報告、データ保存、AIモニタリングの必要性に触れる。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=69
+      section: "第3章 3.3.2; 第2章 2.8.7"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      要確認: 監査ログ要求そのものではなく、記録保存・エラー報告・監視体制への言及。
+
+  - column: E
+    requirement: should
+    summary_ja: 医師参加型原則により医師が確認し最終判断を行う。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53
+      section: "第3章 3.1.2 WMAが示す医師参加型原則"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      Physician-in-the-Loopとして、医学的専門性を持つ医師の介在と最終判断を説明する。
+
+  - column: F
+    requirement: should
+    summary_ja: バイアス、データセットシフト、精度劣化への注意を求める。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=71
+      section: "第3章 3.3.3 診断・治療の補助"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      診断・治療補助でバイアス、一般化可能性、データセットシフトを課題として整理する。
+
+  - column: G
+    requirement: mention
+    summary_ja: 展開後の能力維持やAIによるAI監視を課題に挙げる。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=51
+      section: "第2章 2.8.7 さいごに"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      要確認: PCCPや市販後管理の制度要求ではなく、AIモニタリング体制の必要性としての言及。
+
+  - column: H
+    requirement: should
+    summary_ja: 医師、開発者、行政を含む責任分担の必要性を示す。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=72
+      section: "第3章 3.3.3 診断・治療の補助"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      WMA声明に関連し、ステークホルダー間の連携と責任分担の必要性を述べる。
+
+  - column: I
+    requirement: should
+    summary_ja: 機微な診療情報の機密性、不正アクセス防止、同意を重視する。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=54
+      section: "第3章 3.1.2 WMAが示す医師参加型原則"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      患者データの取扱いで機密性、不正アクセス防止、透明性、各国法令遵守に言及する。
+
+  - column: J
+    requirement: should
+    summary_ja: 診療情報の情報セキュリティとAI攻撃対策を慎重に検討する。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53
+      section: "第3章 3.1.1 はじめに; 第2章 2.8.4"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      診療情報の情報セキュリティ、敵対的攻撃、データポイズニングを課題として扱う。
+
+  - column: K
+    requirement: mention
+    summary_ja: 診断・治療補助では性能、透明性、医師判断への影響を検討する。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=70
+      section: "第3章 3.3.3 診断・治療の補助"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      要確認: 承認申請用の臨床評価要求ではなく、臨床利用上の倫理・性能課題として確認。
+
+  - column: L
+    requirement: mention
+    summary_ja: WMA声明、日本AI法、国際倫理と国内戦略の整合を整理する。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53
+      section: "第3章 3.1 医療AIを巡る国際倫理と日本の戦略"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      国際倫理と国内制度を人間中心AIの方向性として対比・接続している。
+
+  - column: M
+    requirement: mention
+    summary_ja: 医師会の継続的関与と新たなガバナンス体制を求める。
+    citation:
+      url: https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=56
+      section: "第3章 3.1.4 まとめ; 第2章 2.8.7"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      ライフサイクル要求ではなく、医療DXとAI臨床利用に関する継続的な制度・倫理対応として確認。

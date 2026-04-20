@@ -1,0 +1,168 @@
+id: iso-iec-42001
+name_ja: ISO/IEC 42001 AIマネジメントシステム
+name_en: ISO/IEC 42001:2023 Artificial intelligence management system
+issuer: ISO/IEC JTC 1/SC 42
+jurisdiction: international
+type: standard
+url: https://www.iso.org/standard/81230.html
+version: "2023"
+published_date: 2023-12-01
+last_reviewed: 2026-04-20
+source_hash: sha256:pending-2026-04-20
+maintainer: cursorvers-inc/medai
+tags:
+  - iso
+  - iec
+  - ai-management-system
+  - standard
+source_notes:
+  - note_ja: >
+      2026-04-20取得時点でcurlはCloudflare challengeを返し、標準本文は有償のため未確認。
+      ISO公式ページの公開概要・検索結果スニペットで確認できた範囲のみ記載。
+
+summary_ja: >
+  AIマネジメントシステムの国際標準。本文未取得のため詳細要求は低信頼で限定評価。
+
+cells:
+  - column: A
+    requirement: should
+    summary_ja: AI製品・サービスの開発、提供、利用組織を対象にする。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "ISO public page: What is ISO/IEC 42001?"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      公式ページ公開概要では、AIベース製品・サービスを提供又は利用する組織向けと説明。
+
+  - column: B
+    requirement: mention
+    summary_ja: AI関連リスクと機会を管理する枠組みとして説明される。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "ISO public page: Benefits"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      リスク分類表や医療機器分類の詳細は本文未取得のため未評価。
+
+  - column: C
+    requirement: mention
+    summary_ja: 透明性、トレーサビリティ、信頼性を利点として掲げる。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "ISO public page: Benefits"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      透明性の条項番号や具体要求は標準本文未取得のため確認していない。
+
+  - column: D
+    requirement: not_assessed
+    summary_ja: 監査ログ・記録要求は本文未取得で評価未了。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "not assessed; standard text unavailable"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      AIMSの記録管理に関する可能性はあるが、条項を確認できないため未評価。
+
+  - column: E
+    requirement: not_assessed
+    summary_ja: 人間監督の具体要求は本文未取得で評価未了。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "not assessed; standard text unavailable"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      公開概要だけではHuman oversightの条項を確認できない。
+
+  - column: F
+    requirement: not_assessed
+    summary_ja: データ品質・バイアス要求は本文未取得で評価未了。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "not assessed; standard text unavailable"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      詳細要求は標準本文又は正規プレビュー確認が必要。
+
+  - column: G
+    requirement: not_assessed
+    summary_ja: PCCP・市販後管理相当の条項は評価未了。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "not assessed; standard text unavailable"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      AIシステムの継続改善との関係はあり得るが、条項未確認。
+
+  - column: H
+    requirement: mention
+    summary_ja: 方針、目的、プロセスによる責任あるAI管理を扱う。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "ISO public page: FAQ; AIMS definition"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      責任主体の詳細分担は本文未取得のため未評価。
+
+  - column: I
+    requirement: not_assessed
+    summary_ja: 同意・プライバシー要求は本文未取得で評価未了。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "not assessed; standard text unavailable"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      公開概要ではプライバシー条項番号を確認できない。
+
+  - column: J
+    requirement: not_assessed
+    summary_ja: セキュリティ要求は本文未取得で評価未了。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "not assessed; standard text unavailable"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      セキュリティ管理要求は標準本文の確認が必要。
+
+  - column: K
+    requirement: not_assessed
+    summary_ja: 臨床評価要求は本文未取得で評価未了。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "not assessed; standard text unavailable"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      ISO/IEC 42001は医療専用ではないため、臨床評価の有無は本文確認が必要。
+
+  - column: L
+    requirement: mention
+    summary_ja: AI管理システムの国際標準として位置づけられる。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "ISO public page: General information"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      ISO/IEC国際標準であり、国際整合の参照点になる。
+
+  - column: M
+    requirement: should
+    summary_ja: AIMSの確立、実施、維持、継続的改善を要求する。
+    citation:
+      url: https://www.iso.org/standard/81230.html
+      section: "ISO public page: What is ISO/IEC 42001?"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      公開概要で継続的改善まで確認。具体条項番号は本文未取得。

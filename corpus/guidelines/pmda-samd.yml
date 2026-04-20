@@ -1,0 +1,169 @@
+id: pmda-samd
+name_ja: PMDA SaMD情報ページ
+name_en: PMDA Software as a Medical Device (SaMD)
+issuer: Pharmaceuticals and Medical Devices Agency
+jurisdiction: jp
+type: regulatory
+url: https://www.pmda.go.jp/english/review-services/reviews/0009.html
+version: "page updated 2026-04-06"
+published_date: 2026-04-06
+last_reviewed: 2026-04-20
+source_hash: sha256:9ebdf65034e2ffe0485a7c28ac46e8be21f5977dd71f4e6e0cae4b7ef0178ae5
+maintainer: cursorvers-inc/medai
+tags:
+  - samd
+  - jp
+  - pmda
+  - regulatory
+source_documents:
+  - url: https://www.pmda.go.jp/english/review-services/reviews/0009.html
+    note_ja: PMDA公式SaMD情報ページ。
+  - url: https://www.pmda.go.jp/files/000232497.pdf
+    note_ja: ユーザー指定PDF。2026-04-20取得時点でHTTP 404のため本文未確認。
+
+summary_ja: >
+  PMDAがSaMDの該当性、相談、承認審査、QMS、審査ポイント、DASH施策を集約する公式情報ページ。
+
+cells:
+  - column: A
+    requirement: must
+    summary_ja: PMD法上の医療目的かつ重大リスクのソフトウェアを対象化。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#classfication
+      section: "Determination Whether Software Qualifies as a Medical Device"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      PMDAページは、PMD Act上の対象ソフトウェアの範囲を説明している。
+
+  - column: B
+    requirement: mention
+    summary_ja: 承認審査情報として医療機器分類や申請区分への参照あり。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents
+      section: "Approval review / Marketing Approval Review"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      PMDAページ自体は分類ルール本文ではなく、分類・承認手続情報への導線を示す。
+
+  - column: C
+    requirement: not_assessed
+    summary_ja: Lane Aでは透明性要求の評価未了。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents
+      section: "未評価（Lane A）"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      透明性の具体要求は関連通知・審査ポイントの追加確認が必要。
+
+  - column: D
+    requirement: not_assessed
+    summary_ja: Lane Aでは監査ログ要求の評価未了。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents
+      section: "未評価（Lane A）"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      監査証跡の具体要求はQMS資料等の追加確認が必要。
+
+  - column: E
+    requirement: not_assessed
+    summary_ja: Lane Aでは人の監督要求の評価未了。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents
+      section: "未評価（Lane A）"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      Human oversightの具体要求は関連審査ポイントの追加確認が必要。
+
+  - column: F
+    requirement: not_assessed
+    summary_ja: Lane Aではデータ品質・バイアス要求の評価未了。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents
+      section: "未評価（Lane A）"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      AI SaMDのデータ品質・バイアスはScience Board等の追加確認が必要。
+
+  - column: G
+    requirement: mention
+    summary_ja: 再評価・再審査の臨床研究相談への言及あり。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation
+      section: "PMDA Consultation on SaMD"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      PCCPそのものの要求はこのページでは確認していない。
+
+  - column: H
+    requirement: mention
+    summary_ja: 製造販売業者からの相談申込みを前提に助言提供。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation
+      section: "PMDA Consultation on SaMD"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      責任分担の詳細ではなく、MAHからの相談手続として確認。
+
+  - column: I
+    requirement: not_assessed
+    summary_ja: Lane Aでは同意・プライバシー要求の評価未了。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents
+      section: "未評価（Lane A）"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      臨床試験倫理への言及はあるが、同意・プライバシー要求の判定は未了。
+
+  - column: J
+    requirement: not_assessed
+    summary_ja: Lane Aではセキュリティ要求の評価未了。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents
+      section: "未評価（Lane A）"
+      retrieved: 2026-04-20
+      confidence: low
+    notes_ja: >
+      セキュリティはQMS・関連通知での追加確認が必要。
+
+  - column: K
+    requirement: should
+    summary_ja: 治験相談で承認申請上の評価充足性を確認。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation
+      section: "PMDA Consultation on SaMD"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      PMDAは治験の倫理性、科学的妥当性、信頼性、安全性を確認すると説明。
+
+  - column: L
+    requirement: mention
+    summary_ja: 国際調和、DASH 2の国際展開、Science Board資料に言及。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#dash
+      section: "Software as a Medical Device / DASH for SaMD 2"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      国際整合の具体要件ではなく、制度背景・施策としての言及。
+
+  - column: M
+    requirement: mention
+    summary_ja: 最新情報更新、審査ポイント整備、相談体制強化に言及。
+    citation:
+      url: https://www.pmda.go.jp/english/review-services/reviews/0009.html#dash
+      section: "Review Points for SaMD / Initiatives to Promote Practical Use of SaMD"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      ライフサイクル管理の要求ではなく、PMDA側の情報更新・制度整備として確認。

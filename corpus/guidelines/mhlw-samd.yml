@@ -1,0 +1,169 @@
+id: mhlw-samd
+name_ja: 厚労省 医療機器プログラムに関する取扱い
+name_en: MHLW Handling of Software as a Medical Device
+issuer: Ministry of Health, Labour and Welfare
+jurisdiction: jp
+type: regulatory
+url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000179749_00004.html
+version: "2023-03-31 partial revision"
+published_date: 2023-03-31
+last_reviewed: 2026-04-20
+source_hash: sha256:b6115cb14368e311237489b3d96fc432196d8607440de0351a20d1e75c446f7b
+maintainer: cursorvers-inc/medai
+tags:
+  - samd
+  - jp
+  - mhlw
+  - regulatory
+source_documents:
+  - url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000179749_00004.html
+    note_ja: 厚労省「医療機器プログラムについて」ページ。
+  - url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+    note_ja: プログラムの医療機器該当性に関するガイドライン（令和5年3月31日一部改正）。
+
+summary_ja: >
+  厚労省が医療機器プログラムの該当性、除外例、判断手順、リスク分類、相談窓口を示す公式情報。
+
+cells:
+  - column: A
+    requirement: must
+    summary_ja: 医療目的と生命健康リスクで医療機器プログラム該当性を判断。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "1 はじめに / 2(1) 医療機器プログラムの範囲"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      疾病診断・治療・予防目的とリスクを該当性判断の中核としている。
+
+  - column: B
+    requirement: must
+    summary_ja: クラスIからIVとGHTFルールでリスク程度を判定。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "6 人の生命及び健康に影響を与えるリスクの程度の考え方"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      SaMDも有体物にインストールされた状態を想定し、原則同様に判定する。
+
+  - column: C
+    requirement: should
+    summary_ja: 非医療機器表示や根拠の検証可能性で誤認防止を求める。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "5(1) 事前準備 / 8(1) 標ぼうの留意事項"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      「望ましい」記述を含むためshould判定。
+
+  - column: D
+    requirement: mention
+    summary_ja: 個人健康記録の収集・ログ作成は非該当例として言及。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "4(3) 使用者が自らの医療・健康情報を閲覧等するプログラム"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      監査ログ義務ではなく、記録・ログ作成を行う非該当例としての言及。
+
+  - column: E
+    requirement: mention
+    summary_ja: 医療関係者の管理下かを使用者分類で確認。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "5(1) 事前準備（使用目的、処理方法などの明確化・整理）"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      Human oversight義務ではなく、該当性判断の使用者分類として確認。
+
+  - column: F
+    requirement: should
+    summary_ja: 根拠情報とアルゴリズム妥当性の検証可能性を整理。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "5(1) 判断のために明確にすべき項目の例示"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      バイアスを直接扱う記述ではなく、根拠・妥当性確認として判定。
+
+  - column: G
+    requirement: none
+    summary_ja: PCCPや市販後監視の明示的扱いは確認できず。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "全文確認（該当記述なし）"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      本ガイドラインは医療機器該当性判断が主題。
+
+  - column: H
+    requirement: should
+    summary_ja: 事業者・開発者が使用者、目的、処理方法を確認整理。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "5(1) 事前準備 / 8(2) 適正使用のための周知啓発"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      「確認、整理、精査等すること」や周知啓発の重要性からshould判定。
+
+  - column: I
+    requirement: mention
+    summary_ja: 個人健康記録の保存・共有例はあるが同意義務は未確認。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "4(3) 使用者が自らの医療・健康情報を閲覧等するプログラム"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      プライバシーや同意の要求としてではなく、非該当例の説明として確認。
+
+  - column: J
+    requirement: none
+    summary_ja: セキュリティ要求の明示的扱いは確認できず。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "全文確認（該当記述なし）"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      本ガイドラインは該当性判断が主題で、サイバー要件は扱っていない。
+
+  - column: K
+    requirement: mention
+    summary_ja: 治験・臨床研究での提供と適用関係に言及。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "7 臨床研究等における取扱いについて"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      臨床評価手法の要求ではなく、臨床研究での法適用関係への言及。
+
+  - column: L
+    requirement: mention
+    summary_ja: GHTF分類を用い、IMDRF分類因子は参考可能と記載。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "6 人の生命及び健康に影響を与えるリスクの程度の考え方 脚注11"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      GHTFはリスク分類で直接使用、IMDRFは参考可能とされる。
+
+  - column: M
+    requirement: mention
+    summary_ja: 規制範囲は今後変更可能で、適正使用周知にも言及。
+    citation:
+      url: https://www.mhlw.go.jp/content/11120000/001082227.pdf
+      section: "2(2) 基本的考え方 / 8(2) 適正使用のための周知啓発"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      ライフサイクル全体の管理要求ではなく、変更可能性と適正使用への言及。

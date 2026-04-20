@@ -1,0 +1,43 @@
+site_name: Medical AI Governance Crosswalk
+site_description: Medical AI governance guideline crosswalk with cited requirement levels.
+site_url: https://cursorvers-inc.github.io/medical-ai-governance-crosswalk/
+repo_name: cursorvers-inc/medical-ai-governance-crosswalk
+repo_url: https://github.com/cursorvers-inc/medical-ai-governance-crosswalk
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+hooks:
+  - scripts/mkdocs_hooks.py
+
+extra_css:
+  - assets/lookup.css
+
+docs_dir: site/docs
+site_dir: site/public
+
+nav:
+  - Home: index.md
+  - マトリクス: matrix.md
+  - Evidence: evidence.md
+  - ガイドライン一覧: guidelines/index.md
+  - 列定義: columns.md

@@ -1,0 +1,120 @@
+id: fda-aiml-saamd-ap
+name_ja: FDA AI/ML SaMDアクションプラン・PCCPガイダンス
+name_en: Artificial Intelligence/Machine Learning (AI/ML)-Based Software as a Medical Device (SaMD) Action Plan and PCCP Guidance
+issuer: U.S. Food and Drug Administration
+jurisdiction: us
+type: regulatory
+url: https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device
+version: "2025.08"
+published_date: 2021-01-12
+last_reviewed: 2026-04-20
+source_hash: sha256:bca81a98373c803b4c83f9ac3d26a438bc468a2343ab5c1f6b83a791e081c2dc
+maintainer: cursorvers-inc/medai
+tags: [samd, aiml, fda, pccp, medical-device, regulatory]
+summary_ja: |
+  FDAのAI/ML SaMD監督方針とPCCP提出推奨を整理し、TPLC・透明性・性能監視を示す。
+cells:
+  - column: A
+    requirement: should
+    summary_ja: AI-DSFを含む医療機器と510(k)等の提出が主対象。
+    citation:
+      url: https://www.fda.gov/media/166704/download#page=9
+      section: "PCCP Guidance, Section III Scope"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: B
+    requirement: should
+    summary_ja: IMDRFリスク分類やFDA便益リスクを踏まえた監督を想定。
+    citation:
+      url: https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=2
+      section: "Introduction & Background; Action 1"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: C
+    requirement: should
+    summary_ja: 学習データ、入力、ロジック、性能根拠等の透明性を推奨。
+    citation:
+      url: https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=5
+      section: "Action 3 Patient-Centered Approach Incorporating Transparency to Users"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: D
+    requirement: should
+    summary_ja: PCCPではデータ管理、更新手順、追跡表で変更根拠を残す。
+    citation:
+      url: https://www.fda.gov/media/166704/download#page=33
+      section: "PCCP Guidance, Section VII.C Traceability"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: E
+    requirement: mention
+    summary_ja: 手動更新や臨床ワークフローで人の入力・判断の役割に触れる。
+    citation:
+      url: https://www.fda.gov/media/166704/download#page=9
+      section: "PCCP Guidance, Section III Scope"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: F
+    requirement: should
+    summary_ja: バイアス識別・低減と頑健性評価の方法開発を重視。
+    citation:
+      url: https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=6
+      section: "Action 4 Regulatory Science Methods Related to Algorithm Bias & Robustness"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: G
+    requirement: should
+    summary_ja: PCCPは予定変更、実装方法、影響評価を提出に含める。
+    citation:
+      url: https://www.fda.gov/media/166704/download#page=14
+      section: "PCCP Guidance, Section V Policy for Predetermined Change Control Plans"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: H
+    requirement: should
+    summary_ja: 製造業者がPCCPを作成し品質システムで影響評価する。
+    citation:
+      url: https://www.fda.gov/media/166704/download#page=34
+      section: "PCCP Guidance, Section VIII Impact Assessment"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: I
+    requirement: mention
+    summary_ja: 患者中心の信頼・透明性を扱うが同意手続は主題外。
+    citation:
+      url: https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=5
+      section: "Action 3 Patient-Centered Approach Incorporating Transparency to Users"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: J
+    requirement: mention
+    summary_ja: GMLPを医療機器サイバーセキュリティ施策と連携すると記載。
+    citation:
+      url: https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=4
+      section: "Action 2 Good Machine Learning Practice (GMLP)"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: K
+    requirement: should
+    summary_ja: PCCPの性能評価・検証妥当性確認で安全有効性を示す。
+    citation:
+      url: https://www.fda.gov/media/166704/download#page=31
+      section: "PCCP Guidance, Section VII.B(3) Performance evaluation"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: L
+    requirement: mention
+    summary_ja: GMLP標準化やIMDRF等との国際調和を推進。
+    citation:
+      url: https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=4
+      section: "Action 2 Good Machine Learning Practice (GMLP)"
+      retrieved: 2026-04-20
+      confidence: high
+  - column: M
+    requirement: should
+    summary_ja: 開発前から市販後までTPLC監督とRWP監視を重視。
+    citation:
+      url: https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=7
+      section: "Introduction & Background; Action 5 Real-World Performance (RWP)"
+      retrieved: 2026-04-20
+      confidence: high

@@ -1,0 +1,168 @@
+id: who-aih
+name_ja: WHO AI for Health倫理・ガバナンス
+name_en: Ethics and governance of artificial intelligence for health
+issuer: World Health Organization
+jurisdiction: international
+type: ethical
+url: https://www.who.int/publications/i/item/9789240029200
+version: "2021 guidance + 2023 LLM update + 2024/2025 LMM guidance"
+published_date: 2021-06-28
+last_reviewed: 2026-04-20
+source_hash: sha256:dc5697ab8ba83b0ab42232da6e85f1dd41eb4fab9d112deaedfa97458a8cdfb1
+maintainer: cursorvers-inc/medai
+tags:
+  - who
+  - ai-health
+  - ethics
+  - governance
+  - lmm
+
+summary_ja: |
+  WHOの医療AI倫理・ガバナンス指針。2021年版の6原則に加え、LMM向け勧告を参照する。
+
+source_notes:
+  - title: Ethics and governance of artificial intelligence for health
+    url: https://www.who.int/publications/i/item/9789240029200
+    published_date: 2021-06-28
+    pdf_sha256: dc5697ab8ba83b0ab42232da6e85f1dd41eb4fab9d112deaedfa97458a8cdfb1
+  - title: "Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models"
+    url: https://www.who.int/publications-detail-redirect/9789240084759
+    published_date: 2025-03-25
+    note_ja: IRIS citation は 2024 年刊行として記録。WHO publication page は 2025-03-25 表示。
+    pdf_sha256: b85c025219cc483f1e05427290660f7c6cffc7830bf2e9f5af46e4045e011d41
+  - title: WHO calls for safe and ethical AI for health
+    url: https://www.who.int/news/item/16-05-2023-who-calls-for-safe-and-ethical-ai-for-health
+    published_date: 2023-05-16
+    note_ja: 生成AI/LLMの医療利用に関する2023年WHO departmental update。
+
+cells:
+  - column: A
+    requirement: mention
+    summary_ja: 医療AI全般とLMMの医療・公衆衛生利用を対象にする。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=13
+      section: "Overview; 2021 guidance"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      2021年版はAI for health全般、LMM版は診療・患者利用・事務・教育・研究などを扱う。
+  - column: B
+    requirement: mention
+    summary_ja: LMMではリスクベース枠組みと規制負荷差に言及。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=65
+      section: "Section 5, Assessment of general-purpose foundation models and/or applications used in health care"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      "the burden of proof increasing with the level of risk" と記載。ただし分類表ではない。
+  - column: C
+    requirement: should
+    summary_ja: 透明性・説明可能性・理解可能性を中核原則に置く。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=42
+      section: "Executive summary; Section 5"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      6原則の一つとして透明性、説明可能性、理解可能性を掲げる。
+  - column: D
+    requirement: should
+    summary_ja: LMMでは第三者監査、影響評価、公開を求める。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=18
+      section: "Sections 4.2, 5.2, 6.4"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      LMM guidance は開発初期監査、影響評価、独立したリリース後監査を勧告する。
+  - column: E
+    requirement: should
+    summary_ja: 医療判断は人間が管理し、人間監督点を設ける。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=41
+      section: "Executive summary; Protecting human autonomy"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      人間の自律、医療判断の人間による管理、human warranty を重視する。
+  - column: F
+    requirement: should
+    summary_ja: 低品質・非代表データとバイアスの最小化を重視する。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=44
+      section: "Executive summary; inclusiveness and equity"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      2021年版は公平性と包摂性、LMM版は訓練データ品質とバイアスを明示する。
+  - column: G
+    requirement: mention
+    summary_ja: 実使用中の継続的評価とリリース後監査に触れる。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=72
+      section: "Section 6.2; deployment responsibilities"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: |
+      PCCP固有用語ではないが、運用中評価、継続監視、post-release audits を扱う。
+  - column: H
+    requirement: should
+    summary_ja: 責任と説明責任、被害救済、価値連鎖上の責任を求める。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=44
+      section: "Executive summary; responsibility and accountability"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      LMM guidance Section 7 は開発、提供、導入の価値連鎖上の責任にも言及する。
+  - column: I
+    requirement: should
+    summary_ja: プライバシー、機密性、有効な同意、データ保護を要求する。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=41
+      section: "Executive summary; Protecting human autonomy"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      2021年版は自律原則にプライバシー、機密性、有効な同意を含める。
+  - column: J
+    requirement: mention
+    summary_ja: 安全性とサイバーセキュリティ上のリスクを扱う。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=18
+      section: "Sections 4.2, 5.2; cybersecurity risks"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      LMM guidance は安全性、サイバーセキュリティ、患者情報保護のリスクを列挙する。
+  - column: K
+    requirement: should
+    summary_ja: 安全性、正確性、有効性、性能証明を重視する。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=42
+      section: "Executive summary; human well-being and safety"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      2021年版は安全性・正確性・有効性、LMM版は性能証明や医療機器規制適合を扱う。
+  - column: L
+    requirement: should
+    summary_ja: LMMと医療AIの国際的な協調ガバナンスを求める。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=78
+      section: "Section 8; International governance of LMMs"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      LMM guidance は国際ルール形成、国連内協調、最低基準の整合を扱う。
+  - column: M
+    requirement: should
+    summary_ja: 設計、導入、実使用中の継続評価を求める。
+    citation:
+      url: https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=46
+      section: "Executive summary; responsive and sustainable"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: |
+      2021年版は実使用中の継続的・体系的・透明な評価を求める。

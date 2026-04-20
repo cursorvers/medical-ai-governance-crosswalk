@@ -1,0 +1,171 @@
+id: meti-ai-guidelines
+name_ja: 経済産業省 AI事業者ガイドライン
+name_en: AI Guidelines for Business
+issuer: 経済産業省
+jurisdiction: jp
+type: governmental_guideline
+url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/index.html
+version: "1.2"
+published_date: 2026-03-31
+last_reviewed: 2026-04-20
+source_hash: sha256:0ed456065a0e97b5d45f30c02b10cc02d63a9408de4f8f6b666e3b7c96ce6286
+maintainer: cursorvers-inc/medai
+tags:
+  - meti
+  - jp
+  - ai-guidelines
+  - governance
+source_documents:
+  - url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html
+    note_ja: AI事業者ガイドライン第1.2版掲載ページ。
+    html_sha256: 2916cf1a23f7899ddb86bba68d268994fb50be0b95297b1e719b056ddd4f01f4
+  - url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+    note_ja: AI事業者ガイドライン第1.2版本編PDF。
+    pdf_sha256: 64dff6280a873c76e6adb824a57ce770272cef8a2354ba59db3c04888f60f55d
+
+summary_ja: >
+  AI開発者・提供者・利用者向けに、人間中心、リスクベース、透明性等を示す日本政府指針。
+
+cells:
+  - column: A
+    requirement: should
+    summary_ja: AI開発者、提供者、利用者を主対象にする。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第1部 2. 対象"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      業務外利用者やデータ提供者は対象外だが、必要な対応には言及する。
+
+  - column: B
+    requirement: should
+    summary_ja: 危害の大きさと蓋然性に応じたリスクベース対応を重視。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第1部 はじめに; リスクベースアプローチ"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      医療機器分類ではなく、AI利用形態に伴う社会的リスクの大きさに対応する考え方。
+
+  - column: C
+    requirement: should
+    summary_ja: ステークホルダーへの情報提供で透明性を高める。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第2部 B. 6) 透明性"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      出力過程、根拠、判断根拠等の説明可能性・解釈可能性にも触れる。
+
+  - column: D
+    requirement: should
+    summary_ja: 判断過程、判断根拠等のログ記録・保存を求める。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第2部 B. 6) 透明性"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      ログ保存は原因究明やトレーサビリティ、説明責任と接続して説明される。
+
+  - column: E
+    requirement: should
+    summary_ja: 人間中心の考え方に基づく開発・提供・利用を求める。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第2部 A. 基本理念; B. 1) 人間中心"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      AIに単独判断させず適切なタイミングで人が関与する趣旨の記述を含む。
+
+  - column: F
+    requirement: should
+    summary_ja: データの正確性・最新性と回避不能なバイアス認識を求める。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第2部 B. 2) 安全性; 3) 公平性"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      学習等に用いるデータの適切性、バイアス要因、技術要素と利用者振る舞いを扱う。
+
+  - column: G
+    requirement: should
+    summary_ja: ライフサイクル全体でリスク対策と環境変化対応を行う。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第1部 はじめに; 第2部 B. 共通の指針"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      PCCP用語はないが、AIの開発・提供・利用と実運用後の変化対応を扱う。
+
+  - column: H
+    requirement: should
+    summary_ja: 各主体の役割に応じ合理的範囲で説明責任を果たす。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第2部 B. 7) アカウンタビリティ"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      責任者の設定、方針策定・公表、リスク対応状況の説明を扱う。
+
+  - column: I
+    requirement: should
+    summary_ja: 個人情報保護法等を踏まえプライバシー保護を検討する。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第2部 B. 4) プライバシー保護"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      プライバシーポリシー、国際的個人データ保護原則、越境移転にも言及。
+
+  - column: J
+    requirement: should
+    summary_ja: 不正操作や外部攻撃に備えセキュリティを確保する。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第2部 B. 5) セキュリティ確保"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      AIシステムの振る舞い改変、停止、プロンプト等への攻撃を含むリスクに触れる。
+
+  - column: K
+    requirement: none
+    summary_ja: 医療AI固有の臨床評価要求は本編確認範囲で扱いなし。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "本編確認範囲; 医療固有臨床評価なし"
+      retrieved: 2026-04-20
+      confidence: medium
+    notes_ja: >
+      安全性評価や品質には触れるが、医療機器の臨床評価要求としては確認できない。
+
+  - column: L
+    requirement: mention
+    summary_ja: NIST、ISO、EU AI法等の海外原則・標準を参照する。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第1部 はじめに; 第2部 B. 6) 透明性"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      NIST AI RMF、ISO/IEC JTC1/SC42、EU AI法等を参考情報として扱う。
+
+  - column: M
+    requirement: should
+    summary_ja: AIライフサイクル全体で自主的な対策実行を促す。
+    citation:
+      url: https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf
+      section: "第1部 はじめに; 第2部 B. 共通の指針"
+      retrieved: 2026-04-20
+      confidence: high
+    notes_ja: >
+      AI開発、提供、利用、実運用後、更新・再学習を含む継続的対応を前提にする。

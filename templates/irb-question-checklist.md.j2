@@ -1,0 +1,75 @@
+# 医療AI研究 IRB質問票テンプレート
+
+> **目的**: 医療AI研究の倫理審査で、該当性、リスク、透明性、バイアス、プライバシー、同意、モニタリングを質問票として整理する。
+> **対象**: 医療AIを用いる臨床研究、観察研究、二次利用研究、生成AI利用研究、研究支援AIの導入審査。
+
+## ① 研究概要
+
+| 項目 | 記入欄 |
+|---|---|
+| 研究課題名 |  |
+| 研究責任者 / 所属 |  |
+| AIシステム / モデル名 |  |
+| AIの役割 |  |
+| 対象データ |  |
+| 対象者 / 患者集団 |  |
+| 研究デザイン |  |
+| 主要評価項目 |  |
+| 外部提供 / 委託 / クラウド利用 |  |
+| IRBで判断してほしい論点 |  |
+
+### 参照ガイドライン
+
+| ガイドライン | 要約 | 原文 |
+|---|---|---|
+{% for guideline in source_guidelines -%}
+| {{ guideline.short_name }} | {{ guideline.summary_ja | md }} | [official source]({{ guideline.url }}) |
+{% endfor %}
+
+{% for section in irb_sections %}
+## {{ section.title }}
+
+**確認観点**: {{ section.focus_ja }}
+
+### IRB質問
+
+{% for question in section.questions -%}
+- {{ question }}
+{% endfor %}
+- 研究計画書の該当箇所:
+- 追加で求める資料:
+- 判定メモ:
+
+### 根拠セル要約
+
+{% for column in section.columns %}
+#### {{ column.section_title }}
+
+**セル定義**: {{ column.description_ja }}
+
+| ガイドライン | 要求強度 | セル要約 | 原文リンク |
+|---|---|---|---|
+{% for item in column["items"] -%}
+| {{ item.short_name }} | `{{ item.requirement }}` | {{ item.summary_ja | md }} | [{{ item.citation.section | md }} / {{ item.citation.confidence | md }}]({{ item.citation.url }}) |
+{% endfor %}
+
+{% endfor %}
+{% endfor %}
+---
+
+## IRB判定メモ
+
+| 判定項目 | メモ |
+|---|---|
+| 承認 / 条件付き承認 / 継続審査 / 不承認 |  |
+| 主な条件 |  |
+| 同意説明文書の修正 |  |
+| モニタリング条件 |  |
+| 報告義務 |  |
+| 次回確認日 |  |
+
+## Footnotes
+
+[^cc-by]: 本資料のオリジナル編集物 (構成、要約、表) は CC-BY 4.0。第三者ガイドライン原文の権利は各権利者に帰属し、CC-BY の対象外。
+
+**Disclaimer**: 本資料は公開ガイドラインの参照用コンパイルであり、法的助言、規制適合性の保証、診療判断、倫理審査結果の保証ではありません。最終判断は必ず所属機関の倫理指針、IRB手順書、WHO/NIST/JMSF等の原文および適用法令を参照してください。

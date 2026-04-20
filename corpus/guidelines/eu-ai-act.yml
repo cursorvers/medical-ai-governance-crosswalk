@@ -1,0 +1,125 @@
+id: eu-ai-act
+name_ja: EU AI法
+name_en: Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence
+issuer: European Parliament and Council of the European Union
+jurisdiction: eu
+type: regulatory
+url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689
+version: "2024.07"
+published_date: 2024-07-12
+last_reviewed: 2026-04-20
+source_hash: sha256:pending-2026-04-20
+maintainer: cursorvers-inc/medai
+tags: [ai-act, eu, high-risk-ai, medical-device, regulatory]
+source_notes:
+  - title: Regulation (EU) 2024/1689
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689
+    retrieved: 2026-04-20
+    note_ja: curl -sL -A "curl/8.7.1" では HTTP 202 WAF challenge かつ 0 byte 応答となり、原文本文を取得できなかったため source_hash は pending placeholder とする。
+summary_ja: |
+  EUのAI包括規則。医療機器AI等の高リスク分類、提供者義務、監視・透明性を定める。
+cells:
+  - column: A
+    requirement: must
+    summary_ja: EU市場・利用のAIに適用し医療機器AIも対象化。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-6
+      section: "Article 2(1); Article 6(1); Annex I Section A points 11-12"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: B
+    requirement: must
+    summary_ja: Annex I対象かAnnex III該当なら高リスクAIに分類。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-6
+      section: "Article 6(1)-(4); Annex III point 5(a), 5(d)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: C
+    requirement: must
+    summary_ja: 提供者は導入者へ性能、限界、使用説明を提供する義務。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-13
+      section: "Article 13(1)-(3)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: D
+    requirement: must
+    summary_ja: 高リスクAIはライフタイム中の自動ログ記録を技術的に可能にする。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-12
+      section: "Article 12(1)-(2); Article 21(2)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: E
+    requirement: must
+    summary_ja: 高リスクAIは自然人による有効な監督を可能に設計する。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-14
+      section: "Article 14(1)-(5)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: F
+    requirement: must
+    summary_ja: 訓練・検証・試験データの品質とバイアス対策を要求。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-10
+      section: "Article 10(1)-(5)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: G
+    requirement: must
+    summary_ja: 市販後監視を置き、重大インシデントを報告する義務。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-72
+      section: "Article 72(1)-(4); Article 73(1)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: H
+    requirement: must
+    summary_ja: 提供者等の義務とQMS内の責任枠組みを定める。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-17
+      section: "Article 16; Article 17(1)(m)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: I
+    requirement: must
+    summary_ja: 個人データ保護法を維持し、特殊データ処理に保護条件を課す。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-10
+      section: "Article 2(7); Article 10(5)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: J
+    requirement: must
+    summary_ja: 正確性、堅牢性、サイバーセキュリティ水準を確保する義務。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-15
+      section: "Article 15(1)-(5)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: K
+    requirement: must
+    summary_ja: 意図目的に照らした試験・妥当性確認と性能指標を要求。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-9
+      section: "Article 9(6)-(8); Article 15(1)-(4)"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: L
+    requirement: mention
+    summary_ja: 整合規格・共通仕様と既存EU整合法令との接続を規定。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-40
+      section: "Article 8(2); Article 40; Article 41"
+      retrieved: 2026-04-20
+      confidence: medium
+  - column: M
+    requirement: must
+    summary_ja: リスク管理、QMS、市販後監視を通じた継続管理を要求。
+    citation:
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-72
+      section: "Article 9(2); Article 17(1); Article 72"
+      retrieved: 2026-04-20
+      confidence: medium

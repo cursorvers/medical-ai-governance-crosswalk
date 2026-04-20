@@ -1,0 +1,29 @@
+site_name: Medical AI Governance Crosswalk
+docs_dir: docs
+site_dir: public
+site_url: https://cursorvers-inc.github.io/medical-ai-governance-crosswalk/
+theme:
+  name: material
+  language: ja
+plugins:
+- search
+extra_css:
+- assets/lookup.css
+hooks:
+- ../scripts/mkdocs_hooks.py
+nav:
+- Home: index.md
+- Matrix: matrix.md
+- Evidence: evidence.md
+- Columns: columns.md
+- Guidelines:
+  - EU AI法: guidelines/eu-ai-act.md
+  - FDA AI/ML SaMDアクションプラン・PCCPガイダンス: guidelines/fda-aiml-saamd-ap.md
+  - IMDRF SaMD作業部会文書: guidelines/imdrf-samd.md
+  - ISO/IEC 42001 AIマネジメントシステム: guidelines/iso-iec-42001.md
+  - 日本医師会 AIの臨床利用答申: guidelines/jmsf-ai-medical.md
+  - 経済産業省 AI事業者ガイドライン: guidelines/meti-ai-guidelines.md
+  - 厚労省 医療機器プログラムに関する取扱い: guidelines/mhlw-samd.md
+  - NIST AIリスクマネジメントフレームワーク: guidelines/nist-ai-rmf.md
+  - PMDA SaMD情報ページ: guidelines/pmda-samd.md
+  - WHO AI for Health倫理・ガバナンス: guidelines/who-aih.md

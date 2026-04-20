@@ -1,0 +1,27 @@
+{
+  "name": "@cursorversinc/guidescope-medical-corpus",
+  "version": "0.1.0",
+  "description": "Medical AI governance crosswalk corpus (PMDA/FDA/EU/WHO 10 guidelines x 13 columns)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "medical-ai",
+    "governance",
+    "pmda",
+    "fda",
+    "eu-ai-act",
+    "guidescope",
+    "corpus"
+  ],
+  "scripts": {
+    "build:corpus": "node scripts/build-corpus.mjs",
+    "build": "node scripts/build-corpus.mjs && tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

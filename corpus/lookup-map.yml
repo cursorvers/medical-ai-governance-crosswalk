@@ -1,0 +1,28 @@
+# 臨床医が発する典型キーワード → 13コラム (A-M) へのマッピング
+mappings:
+  - column: K  # 臨床評価
+    keywords: [IRB, 倫理審査, 臨床研究, 治験, 臨床評価, 研究計画, study design, clinical evaluation, clinical study]
+  - column: C  # 透明性
+    keywords: [透明性, 説明可能性, ブラックボックス, 説明, XAI, interpretability, transparency, explainability]
+  - column: D  # 監査ログ
+    keywords: [監査, ログ, 記録, audit, traceability, audit log, recordkeeping]
+  - column: F  # データ品質・バイアス
+    keywords: [バイアス, 偏り, データ品質, 代表性, fairness, bias, data quality, representativeness]
+  - column: I  # 同意・プライバシー
+    keywords: [同意, プライバシー, 個人情報, consent, privacy, 患者情報, personal data]
+  - column: E  # Human oversight
+    keywords: [医師監督, human in the loop, oversight, 人間監督, 責任者, human oversight, HITL]
+  - column: H  # 責任主体
+    keywords: [責任, 医師法, 責任主体, accountability, liability, responsibility]
+  - column: B  # リスク分類
+    keywords: [リスク, 高リスク, リスク分類, risk class, 危険性, risk classification, high risk]
+  - column: A  # 適用対象
+    keywords: [適用, 該当性, 対象, scope, applicability, SaMD該当, intended use]
+  - column: J  # セキュリティ
+    keywords: [セキュリティ, サイバー, 暗号化, security, cyber, cybersecurity, encryption]
+  - column: G  # PCCP・市販後
+    keywords: [PCCP, 市販後, 変更管理, post-market, update, change control, postmarket]
+  - column: L  # 国際整合
+    keywords: [国際, 整合, IMDRF, harmonization, international alignment, global]
+  - column: M  # ライフサイクル
+    keywords: [ライフサイクル, 運用, 教育, lifecycle, TPLC, maintenance, training]

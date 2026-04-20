@@ -1,0 +1,80 @@
+# 患者説明・インフォームドコンセント補助テンプレート
+
+> **目的**: 医師が外来・病棟でAI介入を患者に説明する際に、AI使用、想定利益、既知の限界、代替手段、拒否・撤回の権利を整理する。
+> **対象**: 外来・病棟で患者にAI介入を説明する医師、研究者、説明文書を作る臨床研究チーム。
+
+## 説明対象
+
+| 項目 | 記入欄 |
+|---|---|
+| 診療 / 研究 / 説明場面 |  |
+| 使用するAIシステム |  |
+| AIが扱う情報 |  |
+| AIの出力 |  |
+| 最終判断者 |  |
+| 患者への説明者 |  |
+| 拒否・撤回時の代替対応 |  |
+
+## 参照ガイドライン
+
+| ガイドライン | 要約 | 原文 |
+|---|---|---|
+{% for guideline in source_guidelines -%}
+| {{ guideline.short_name }} | {{ guideline.summary_ja | md }} | [official source]({{ guideline.url }}) |
+{% endfor %}
+
+{% for section in patient_explanation_sections %}
+## {{ section.title }}
+
+**確認観点**: {{ section.focus_ja }}
+
+### 説明文ドラフト欄
+
+{% for prompt in section.prompts -%}
+- {{ prompt }}
+{% endfor %}
+
+> 患者向け表現:
+>
+> 
+
+### 確認メモ
+
+- 説明済み / 未説明:
+- 患者からの質問:
+- 追加説明が必要な点:
+
+### 根拠セル要約
+
+{% for column in section.columns %}
+#### {{ column.section_title }}
+
+**セル定義**: {{ column.description_ja }}
+
+| ガイドライン | 要求強度 | セル要約 | 原文リンク |
+|---|---|---|---|
+{% for item in column["items"] -%}
+| {{ item.short_name }} | `{{ item.requirement }}` | {{ item.summary_ja | md }} | [{{ item.citation.section | md }} / {{ item.citation.confidence | md }}]({{ item.citation.url }}) |
+{% endfor %}
+
+{% endfor %}
+{% endfor %}
+---
+
+## 説明・同意記録
+
+| 項目 | メモ |
+|---|---|
+| AI利用の説明 |  |
+| 利益と限界の説明 |  |
+| 代替手段の説明 |  |
+| 拒否・撤回の説明 |  |
+| データ利用・外部提供の説明 |  |
+| 患者の希望 / 質問 |  |
+| 同意 / 不同意 / 保留 |  |
+
+## Footnotes
+
+[^cc-by]: 本資料のオリジナル編集物 (構成、要約、表) は CC-BY 4.0。第三者ガイドライン原文の権利は各権利者に帰属し、CC-BY の対象外。
+
+**Disclaimer**: 本資料は公開ガイドラインの参照用コンパイルであり、法的助言、規制適合性の保証、診療判断、同意取得の法的有効性を保証するものではありません。最終説明文は所属機関の同意手順、倫理審査、個人情報保護規程、WHO/JMSF/EU等の原文および適用法令を参照してください。

@@ -1,0 +1,82 @@
+# 病院AI導入ポリシー骨子
+
+> **目的**: 医療機関がAI導入時の審査、継続モニタリング、有害事象報告、教育、変更管理を院内規程として整理する。
+> **対象**: 病院医療安全室、情報システム部門、倫理委員会事務局、診療部門責任者、AI導入審査会議体。
+
+## ポリシー基本情報
+
+| 項目 | 記入欄 |
+|---|---|
+| 文書名 / 版 |  |
+| 所管部署 |  |
+| 承認会議体 |  |
+| 適用開始日 |  |
+| 対象AIシステム |  |
+| 対象部署 |  |
+| 関連規程 |  |
+| 次回見直し日 |  |
+
+## 参照ガイドライン
+
+| ガイドライン | 要約 | 原文 |
+|---|---|---|
+{% for guideline in source_guidelines -%}
+| {{ guideline.short_name }} | {{ guideline.summary_ja | md }} | [official source]({{ guideline.url }}) |
+{% endfor %}
+
+{% for section in hospital_ai_policy_sections %}
+## {{ section.title }}
+
+**確認観点**: {{ section.focus_ja }}
+
+### ポリシー記載案
+
+{% for prompt in section.prompts -%}
+- {{ prompt }}
+{% endfor %}
+
+### 院内実装メモ
+
+- 所管部署:
+- 必要な会議体:
+- 必要な記録:
+- 未決事項:
+
+### 根拠セル要約
+
+{% for column in section.columns %}
+#### {{ column.section_title }}
+
+**セル定義**: {{ column.description_ja }}
+
+| ガイドライン | 要求強度 | セル要約 | 原文リンク |
+|---|---|---|---|
+{% for item in column["items"] -%}
+| {{ item.short_name }} | `{{ item.requirement }}` | {{ item.summary_ja | md }} | [{{ item.citation.section | md }} / {{ item.citation.confidence | md }}]({{ item.citation.url }}) |
+{% endfor %}
+
+{% endfor %}
+{% endfor %}
+---
+
+## 付録: 運用台帳項目
+
+| 項目 | 記入欄 |
+|---|---|
+| AIシステム名 |  |
+| 利用部署 |  |
+| リスク区分 |  |
+| 導入承認日 |  |
+| データ処理責任者 |  |
+| ベンダー連絡先 |  |
+| 監視指標 |  |
+| 有害事象報告先 |  |
+| 教育実施日 |  |
+| 変更履歴 |  |
+| 廃止 / 停止条件 |  |
+
+## Footnotes
+
+[^cc-by]: 本資料のオリジナル編集物 (構成、要約、表) は CC-BY 4.0。第三者ガイドライン原文の権利は各権利者に帰属し、CC-BY の対象外。
+
+**Disclaimer**: 本資料は公開ガイドラインの参照用コンパイルであり、法的助言、規制適合性の保証、診療判断、院内規程としての完全性を保証するものではありません。最終ポリシーは所属機関の規程、医療安全・情報セキュリティ・倫理審査手順、NIST/ISO/JMSF等の原文および適用法令を参照してください。

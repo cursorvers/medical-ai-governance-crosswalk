@@ -1,0 +1,140 @@
+version: "0.1"
+updated: 2026-04-20
+
+columns:
+  - id: A
+    key: applicability_scope
+    name_ja: 適用対象
+    name_en: Applicability scope
+    layer: regulatory
+    short_ja: 何が規制・指針の対象になるか。
+    description_ja: >
+      対象となる製品、ソフトウェア、利用場面、開発段階、除外範囲を整理する。
+
+  - id: B
+    key: risk_classification
+    name_ja: リスク分類
+    name_en: Risk classification
+    layer: regulatory
+    short_ja: リスク区分や分類ルール。
+    description_ja: >
+      医療機器クラス、AIリスク分類、患者安全への影響度などの分類方法を整理する。
+
+  - id: C
+    key: transparency
+    name_ja: 透明性
+    name_en: Transparency
+    layer: operations
+    short_ja: 説明・表示・情報提供。
+    description_ja: >
+      利用者、医療者、患者、規制当局への説明、表示、根拠提示、情報開示を整理する。
+
+  - id: D
+    key: audit_logs
+    name_ja: 監査ログ
+    name_en: Audit logs
+    layer: operations
+    short_ja: 記録、追跡、監査証跡。
+    description_ja: >
+      判断過程、利用履歴、変更履歴、アクセス履歴などの記録と監査可能性を整理する。
+
+  - id: E
+    key: human_oversight
+    name_ja: Human oversight
+    name_en: Human oversight
+    layer: operations
+    short_ja: 人による監督・介入。
+    description_ja: >
+      医師、使用者、事業者、管理者による監督、介入、最終判断、適正使用を整理する。
+
+  - id: F
+    key: data_quality_bias
+    name_ja: データ品質バイアス
+    name_en: Data quality and bias
+    layer: research
+    short_ja: データ品質、偏り、妥当性。
+    description_ja: >
+      学習・評価・入力データの品質、代表性、偏り、根拠、検証可能性を整理する。
+
+  - id: G
+    key: pccp_postmarket
+    name_ja: PCCP市販後
+    name_en: PCCP and post-market
+    layer: lifecycle
+    short_ja: 変更計画と市販後管理。
+    description_ja: >
+      Predetermined Change Control Plan、市販後監視、再評価、変更管理を整理する。
+
+  - id: H
+    key: accountability
+    name_ja: 責任
+    name_en: Accountability
+    layer: regulatory
+    short_ja: 責任主体と役割。
+    description_ja: >
+      開発者、製造販売業者、医療者、使用者、規制当局などの責任範囲を整理する。
+
+  - id: I
+    key: consent_privacy
+    name_ja: 同意プライバシー
+    name_en: Consent and privacy
+    layer: regulatory
+    short_ja: 同意、個人情報、共有。
+    description_ja: >
+      患者・利用者データの同意、プライバシー、個人情報、共有、二次利用を整理する。
+
+  - id: J
+    key: security
+    name_ja: セキュリティ
+    name_en: Security
+    layer: operations
+    short_ja: サイバー・情報セキュリティ。
+    description_ja: >
+      サイバーセキュリティ、アクセス制御、脆弱性対応、情報保護を整理する。
+
+  - id: K
+    key: clinical_evaluation
+    name_ja: 臨床評価
+    name_en: Clinical evaluation
+    layer: research
+    short_ja: 臨床試験・評価・有効性安全性。
+    description_ja: >
+      臨床試験、臨床研究、性能評価、有効性・安全性評価、申請資料を整理する。
+
+  - id: L
+    key: international_alignment
+    name_ja: 国際整合
+    name_en: International alignment
+    layer: regulatory
+    short_ja: 国際基準・海外制度との整合。
+    description_ja: >
+      GHTF、IMDRF、ISO、海外規制、国際展開、国際調和への言及を整理する。
+
+  - id: M
+    key: lifecycle
+    name_ja: ライフサイクル
+    name_en: Lifecycle
+    layer: lifecycle
+    short_ja: 開発から運用・更新まで。
+    description_ja: >
+      開発、申請、導入、教育、変更、更新、廃止までの継続管理を整理する。
+
+requirement_levels:
+  must:
+    name_ja: 必須
+    description_ja: 法令、通知、認証・承認要件などとして明示された義務。
+  should:
+    name_ja: 推奨
+    description_ja: 義務ではないが、望ましい、推奨、留意すべき事項として明示された要求。
+  mention:
+    name_ja: 言及あり
+    description_ja: 論点への言及はあるが、対象主体への要求としては弱い又は限定的。
+  none:
+    name_ja: 扱いなし
+    description_ja: 原文を確認した範囲で、その論点を扱っていない。
+  not_assessed:
+    name_ja: 未評価
+    description_ja: 本資料の作業範囲では、該当論点の評価が完了していない。
+  source_unavailable:
+    name_ja: 出典確認不可
+    description_ja: 公式原文にアクセスできず、要求強度を判定できない。

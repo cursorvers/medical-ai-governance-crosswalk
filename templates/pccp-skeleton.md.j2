@@ -1,0 +1,67 @@
+# PCCP (Predetermined Change Control Plan) 骨子テンプレート
+
+> **目的**: AI/ML SaMD の予定変更を、対象定義、変更計画、変更プロトコル、影響評価、検証戦略、報告/通知計画に分けて整理する。
+> **対象**: AI/ML SaMD、臨床意思決定支援、モデル更新を伴う医療AI製品の開発・薬事・品質保証チーム。
+
+## 基本情報 (利用者記入欄)
+
+| 項目 | 記入欄 |
+|---|---|
+| 製品名 / モデル名 |  |
+| モデルバージョン / リリース単位 |  |
+| 意図する使用 / 対象患者 |  |
+| 入力データ |  |
+| 出力 / 推奨 / 判定 |  |
+| 変更管理責任者 |  |
+| 品質システム上の承認経路 |  |
+| PCCP対象外とする変更 |  |
+
+## 参照ガイドライン
+
+| ガイドライン | 要約 | 原文 |
+|---|---|---|
+{% for guideline in source_guidelines -%}
+| {{ guideline.short_name }} | {{ guideline.summary_ja | md }} | [official source]({{ guideline.url }}) |
+{% endfor %}
+
+{% for section in pccp_sections %}
+## {{ section.title }}
+
+**確認観点**: {{ section.focus_ja }}
+
+### 記入欄
+
+{% for prompt in section.prompts -%}
+- {{ prompt }}
+{% endfor %}
+- 未解決論点:
+- 次回レビュー日:
+
+### 根拠セル要約
+
+{% for column in section.columns %}
+#### {{ column.section_title }}
+
+**セル定義**: {{ column.description_ja }}
+
+| ガイドライン | 要求強度 | セル要約 | 該当条項リンク |
+|---|---|---|---|
+{% for item in column["items"] -%}
+| {{ item.short_name }} | `{{ item.requirement }}` | {{ item.summary_ja | md }} | [{{ item.citation.section | md }} / {{ item.citation.confidence | md }}]({{ item.citation.url }}) |
+{% endfor %}
+
+{% endfor %}
+### レビュー質問
+
+- このセクションの記載は、PCCP対象変更とPCCP対象外変更を区別できるか。
+- 変更後の安全性・有効性・透明性・データ品質を説明できるか。
+- 変更時の利用者通知、規制当局報告、内部承認が追跡可能か。
+
+{% endfor %}
+---
+
+## Footnotes
+
+[^cc-by]: 本資料のオリジナル編集物 (構成、要約、表) は CC-BY 4.0。第三者ガイドライン原文の権利は各権利者に帰属し、CC-BY の対象外。
+
+**Disclaimer**: 本資料は公開ガイドラインの参照用コンパイルであり、法的助言、規制適合性の保証、診療判断ではありません。最終判断は必ず PMDA/FDA/EU 等の原文および適用される法令・通知を参照してください。
