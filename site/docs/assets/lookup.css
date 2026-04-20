@@ -1,24 +1,449 @@
+:root {
+  --gl-medical-blue: #1a5490;
+  --gl-medical-blue-dark: #103b66;
+  --gl-ink: #162233;
+  --gl-muted: #596778;
+  --gl-soft-blue: #edf6fb;
+  --gl-soft-green: #eef8f2;
+  --gl-line: rgba(26, 84, 144, 0.18);
+  --gl-card: rgba(255, 255, 255, 0.9);
+  --md-primary-fg-color: #1a5490;
+  --md-primary-fg-color--light: #2d76b8;
+  --md-primary-fg-color--dark: #103b66;
+  --md-accent-fg-color: #1a5490;
+}
+
+[data-md-color-scheme="slate"] {
+  --gl-ink: #f3f7fb;
+  --gl-muted: #c5d0dc;
+  --gl-soft-blue: rgba(26, 84, 144, 0.18);
+  --gl-soft-green: rgba(44, 132, 89, 0.16);
+  --gl-line: rgba(198, 224, 244, 0.22);
+  --gl-card: rgba(18, 28, 40, 0.92);
+}
+
+.md-content__inner:before {
+  display: none;
+}
+
+.gl-landing {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  color: var(--gl-ink);
+  background: var(--md-default-bg-color);
+}
+
+.gl-lp-inner {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.gl-lp-hero {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 16%, rgba(26, 84, 144, 0.12), transparent 30%),
+    linear-gradient(145deg, #f7fbff 0%, var(--gl-soft-blue) 48%, var(--gl-soft-green) 100%);
+}
+
+[data-md-color-scheme="slate"] .gl-lp-hero {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(75, 154, 213, 0.18), transparent 30%),
+    linear-gradient(145deg, #0f1720 0%, #162637 52%, #10261e 100%);
+}
+
+.gl-hero-bg-mark {
+  position: absolute;
+  right: max(24px, calc((100vw - 1120px) / 2));
+  bottom: 8vh;
+  width: min(40vw, 420px);
+  aspect-ratio: 1;
+  color: rgba(26, 84, 144, 0.08);
+  background: currentColor;
+  -webkit-mask: url("icons/stethoscope.svg") center / contain no-repeat;
+  mask: url("icons/stethoscope.svg") center / contain no-repeat;
+}
+
+.gl-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  padding: 104px 0 80px;
+}
+
+.gl-eyebrow,
+.gl-kicker,
+.gl-search-label {
+  margin: 0 0 0.75rem;
+  color: var(--gl-medical-blue);
+  font-weight: 700;
+}
+
+.gl-eyebrow,
+.gl-kicker {
+  font-size: 0.82rem;
+}
+
+.gl-hero-copy h1 {
+  max-width: 13em;
+  margin: 0;
+  color: var(--gl-ink);
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.gl-hero-subcopy {
+  max-width: 44rem;
+  margin: 1.4rem 0 0;
+  color: var(--gl-muted);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+.gl-hero-search {
+  border: 1px solid var(--gl-line);
+  border-radius: 8px;
+  background: var(--gl-card);
+  box-shadow: 0 24px 70px rgba(20, 57, 88, 0.14);
+  padding: clamp(20px, 3vw, 32px);
+}
+
 #gl-lookup {
-  margin: 1rem 0 2rem;
+  margin: 0;
 }
 
 #gl-query {
   width: 100%;
   box-sizing: border-box;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--md-default-fg-color--lighter);
+  padding: 1rem 1.1rem;
+  border: 2px solid rgba(26, 84, 144, 0.28);
   border-radius: 8px;
   background: var(--md-default-bg-color);
   color: var(--md-default-fg-color);
-  font-size: 1rem;
+  font-size: 1.06rem;
+  font-family: inherit;
+}
+
+#gl-query:focus {
+  border-color: var(--gl-medical-blue);
+  outline: 3px solid rgba(26, 84, 144, 0.14);
 }
 
 #gl-results {
+  max-height: 45vh;
   margin-top: 1rem;
+  overflow: auto;
 }
 
 .gl-empty {
-  color: var(--md-default-fg-color--light);
+  margin: 0;
+  color: var(--gl-muted);
+}
+
+.gl-suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.8rem 0 0;
+}
+
+.gl-suggest-btn {
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.gl-suggest > .gl-suggest-btn {
+  padding: 0.44rem 0.8rem;
+  border: 1px solid var(--gl-line);
+  background: #fff;
+  color: var(--gl-medical-blue);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 160ms ease-out, border-color 160ms ease-out, box-shadow 160ms ease-out;
+}
+
+[data-md-color-scheme="slate"] .gl-suggest > .gl-suggest-btn {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.gl-suggest > .gl-suggest-btn:hover,
+.gl-suggest > .gl-suggest-btn:focus-visible {
+  border-color: var(--gl-medical-blue);
+  box-shadow: 0 8px 22px rgba(26, 84, 144, 0.16);
+  transform: translateY(-2px);
+}
+
+.gl-scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 2;
+  color: var(--gl-medical-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transform: translateX(-50%);
+}
+
+.gl-section {
+  padding: clamp(64px, 8vw, 104px) 0;
+}
+
+.gl-primary {
+  background: var(--md-default-bg-color);
+}
+
+.gl-secondary {
+  background: var(--gl-soft-blue);
+}
+
+.gl-tertiary {
+  background: var(--gl-soft-green);
+}
+
+.gl-trust,
+.gl-lp-footer {
+  background: #f7fafc;
+}
+
+[data-md-color-scheme="slate"] .gl-trust,
+[data-md-color-scheme="slate"] .gl-lp-footer {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.gl-section-heading,
+.gl-trust-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.gl-section-heading {
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.gl-section h2,
+.gl-supervision h2 {
+  margin: 0;
+  color: var(--gl-ink);
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.gl-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  color: var(--gl-medical-blue);
+  background: currentColor;
+  border-radius: 8px;
+}
+
+.gl-icon-stethoscope {
+  -webkit-mask: url("icons/stethoscope.svg") center / 28px 28px no-repeat;
+  mask: url("icons/stethoscope.svg") center / 28px 28px no-repeat;
+}
+
+.gl-icon-irb {
+  -webkit-mask: url("icons/irb.svg") center / 28px 28px no-repeat;
+  mask: url("icons/irb.svg") center / 28px 28px no-repeat;
+}
+
+.gl-icon-hospital {
+  -webkit-mask: url("icons/hospital.svg") center / 28px 28px no-repeat;
+  mask: url("icons/hospital.svg") center / 28px 28px no-repeat;
+}
+
+.gl-usecase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gl-usecase-card,
+.gl-action-panel {
+  border: 1px solid var(--gl-line);
+  border-radius: 8px;
+  background: var(--gl-card);
+  box-shadow: 0 12px 32px rgba(20, 57, 88, 0.08);
+}
+
+.gl-usecase-card {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.35rem;
+  color: var(--gl-ink);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 170ms ease-out, border-color 170ms ease-out, box-shadow 170ms ease-out;
+}
+
+.gl-usecase-card:hover,
+.gl-usecase-card:focus-visible {
+  border-color: var(--gl-medical-blue);
+  box-shadow: 0 20px 44px rgba(20, 57, 88, 0.16);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+.gl-usecase-card span {
+  color: var(--gl-medical-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.gl-usecase-card strong {
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.gl-usecase-card small {
+  margin-top: auto;
+  color: var(--gl-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.gl-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+}
+
+.gl-action-panel {
+  padding: clamp(20px, 3vw, 32px);
+}
+
+.gl-action-panel p,
+.gl-supervision p,
+.gl-disclaimer {
+  color: var(--gl-muted);
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+.gl-cta {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gl-medical-blue);
+  border-radius: 8px;
+  background: var(--gl-medical-blue);
+  color: #fff;
+  font-weight: 700;
+}
+
+.gl-cta:hover,
+.gl-cta:focus-visible {
+  background: var(--gl-medical-blue-dark);
+  color: #fff;
+}
+
+.gl-cta-secondary {
+  background: transparent;
+  color: var(--gl-medical-blue);
+}
+
+.gl-cta-secondary:hover,
+.gl-cta-secondary:focus-visible {
+  background: var(--gl-medical-blue);
+  color: #fff;
+}
+
+.gl-last-updated {
+  margin: 0;
+  color: var(--gl-muted);
+  font-size: 0.9rem;
+}
+
+.gl-guideline-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1rem;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+}
+
+.gl-guideline-list li {
+  padding: 0.35rem 0 0.35rem 0.25rem;
+  line-height: 1.6;
+}
+
+.gl-disclaimer {
+  max-width: 70rem;
+  padding: 1rem;
+  border: 1px solid var(--gl-line);
+  border-radius: 8px;
+  background: var(--md-default-bg-color);
+}
+
+.gl-supervision {
+  background: var(--md-default-bg-color);
+}
+
+.gl-supervision-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 1.08fr);
+  gap: clamp(24px, 5vw, 64px);
+}
+
+.gl-changelog {
+  padding: 1.15rem;
+  border: 1px solid var(--gl-line);
+  border-radius: 8px;
+  background: var(--gl-card);
+}
+
+.gl-changelog h2,
+.gl-changelog h3 {
+  margin: 0.2rem 0 0.6rem;
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+  font-size: 1.02rem;
+}
+
+.gl-changelog ul {
+  margin: 0.35rem 0 0;
+}
+
+.gl-lp-footer {
+  padding: 32px 0 44px;
+  border-top: 1px solid var(--gl-line);
+}
+
+.gl-lp-footer .gl-lp-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.gl-lp-footer p {
+  margin: 0;
+  color: var(--gl-muted);
 }
 
 .gl-columns {
@@ -38,19 +463,19 @@
 
 .gl-columns button {
   padding: 0.35rem 0.65rem;
-  border: 1px solid var(--md-default-fg-color--lighter);
+  border: 1px solid var(--gl-line);
   background: var(--md-code-bg-color);
   color: var(--md-default-fg-color);
   cursor: pointer;
 }
 
 .gl-column {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 
 .gl-column h2 {
   margin-bottom: 0.75rem;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
 }
 
 .gl-column ol {
@@ -62,8 +487,9 @@
 
 .gl-cell {
   padding: 0.85rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
+  border: 1px solid var(--gl-line);
   border-radius: 8px;
+  background: var(--md-default-bg-color);
 }
 
 .gl-guide,
@@ -87,17 +513,17 @@
 
 .gl-strength.should {
   background: #fff3e0;
-  color: #b45309;
+  color: #8a4b00;
 }
 
 .gl-strength.mention {
   background: #fffde7;
-  color: #8a6d00;
+  color: #715a00;
 }
 
 .gl-strength.none {
   background: #eeeeee;
-  color: #616161;
+  color: #555;
 }
 
 .gl-cell p {
@@ -105,37 +531,178 @@
 }
 
 .gl-confidence {
-  color: var(--md-default-fg-color--light);
+  color: var(--gl-muted);
 }
 
-.gl-hero {
-  background: var(--md-code-bg-color, #f5f5f5);
-  border-left: 4px solid var(--md-primary-fg-color, #5e35b1);
-  padding: 1em 1.2em;
-  margin: 1em 0 1.5em;
-  border-radius: 4px;
-}
-.gl-hero-tag { font-weight: 600; margin: 0 0 0.4em; font-size: 1.05em; }
-.gl-hero-sub { margin: 0; opacity: 0.85; font-size: 0.92em; }
+@media (max-width: 900px) {
+  .gl-hero-grid,
+  .gl-split,
+  .gl-supervision-grid {
+    grid-template-columns: 1fr;
+  }
 
-.gl-suggest {
+  .gl-usecase-grid,
+  .gl-guideline-list {
+    grid-template-columns: 1fr;
+  }
+
+  .gl-section-heading,
+  .gl-trust-meta {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .gl-lp-hero {
+    min-height: 92vh;
+  }
+
+  .gl-hero-grid {
+    padding: 56px 0 48px;
+  }
+
+  .gl-hero-search {
+    order: -1;
+    padding: 18px;
+  }
+
+  .gl-hero-copy h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .gl-hero-subcopy {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .gl-suggest > .gl-suggest-btn,
+  .gl-usecase-card,
+  .gl-cta {
+    width: 100%;
+  }
+
+  #gl-results {
+    max-height: none;
+  }
+
+  .gl-lp-footer .gl-lp-inner {
+    display: block;
+  }
+}
+
+.gl-disclaimer-strip {
+  padding: 0.75rem 16px;
+  background: rgba(255, 193, 7, 0.08);
+  border-top: 1px solid rgba(255, 193, 7, 0.32);
+  border-bottom: 1px solid rgba(255, 193, 7, 0.32);
+}
+
+.gl-disclaimer-strip p {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  color: var(--gl-ink);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+[data-md-color-scheme="slate"] .gl-disclaimer-strip {
+  background: rgba(255, 193, 7, 0.06);
+}
+
+.gl-trust-signal {
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gl-trust-signal li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--gl-line);
+  color: var(--gl-ink);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.gl-trust-signal li:last-child {
+  border-bottom: none;
+}
+
+.gl-trust-signal a {
+  color: var(--gl-medical-blue);
+  font-weight: 700;
+}
+
+.gl-evidence-pack {
+  background: var(--gl-soft-green);
+}
+
+[data-md-color-scheme="slate"] .gl-evidence-pack {
+  background: rgba(44, 132, 89, 0.12);
+}
+
+.gl-evidence-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gl-evidence-list li {
+  padding: 0;
+}
+
+.gl-evidence-list a {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin: 0.6em 0 0.8em;
+  min-height: 56px;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--gl-line);
+  border-radius: 8px;
+  background: var(--gl-card);
+  color: var(--gl-medical-blue);
+  font-weight: 700;
+  transition: transform 160ms ease-out, border-color 160ms ease-out, box-shadow 160ms ease-out;
 }
-.gl-suggest-btn {
-  padding: 0.3em 0.85em;
-  border: 1px solid var(--md-primary-fg-color, #5e35b1);
-  background: transparent;
-  color: var(--md-primary-fg-color, #5e35b1);
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 0.88em;
-  font-family: inherit;
-  transition: background 0.15s, color 0.15s;
+
+.gl-evidence-list a:hover,
+.gl-evidence-list a:focus-visible {
+  border-color: var(--gl-medical-blue);
+  box-shadow: 0 12px 28px rgba(20, 57, 88, 0.14);
+  transform: translateY(-2px);
 }
-.gl-suggest-btn:hover {
-  background: var(--md-primary-fg-color, #5e35b1);
+
+.gl-cell .gl-source-link {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: var(--gl-soft-blue);
+  color: var(--gl-medical-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.gl-cell .gl-source-link:hover,
+.gl-cell .gl-source-link:focus-visible {
+  background: var(--gl-medical-blue);
   color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gl-suggest > .gl-suggest-btn,
+  .gl-usecase-card {
+    transition: none;
+  }
+
+  .gl-suggest > .gl-suggest-btn:hover,
+  .gl-suggest > .gl-suggest-btn:focus-visible,
+  .gl-usecase-card:hover,
+  .gl-usecase-card:focus-visible {
+    transform: none;
+  }
 }

@@ -2,3 +2,5 @@ pyyaml
 jinja2
 mkdocs
 mkdocs-material
+
+Pillow

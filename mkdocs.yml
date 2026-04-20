@@ -7,21 +7,25 @@ repo_url: https://github.com/cursorvers/medical-ai-governance-crosswalk
 theme:
   name: material
   language: ja
+  custom_dir: site/overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: teal
+      primary: indigo
+      accent: blue
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: teal
+      primary: indigo
+      accent: blue
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  font:
+    text: Noto Sans JP
+    code: Noto Sans Mono
 
 plugins:
   - search

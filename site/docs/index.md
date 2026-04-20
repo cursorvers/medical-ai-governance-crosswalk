@@ -1,80 +1,142 @@
-# Medical AI Governance Crosswalk
-
-> **DISCLAIMER**: 本資料は公開ガイドラインの参照用コンパイルです。法的助言、規制適合性の保証、診療判断ではありません。利用前に必ず原文を参照してください。
-
-<div class="gl-hero">
-  <p class="gl-hero-tag">医療AIの公開ガイドライン10本×論点13列を、外来30秒で引けるクロスウォーク</p>
-  <p class="gl-hero-sub">臨床医・研究者・医療機関 "使う側" の意思決定支援 / LLM非依存・静的検索（ハルシネーション回避）</p>
-</div>
-
-## 3つの使い方シナリオ
-
-!!! tip "シナリオ1: 外来中30秒"
-    患者から「このAI診断の安全性は？」と聞かれた → 検索ボックスに `透明性` `説明可能性` と入れる → 該当列の10ガイドラインの要求レベル(must/should/mention)即提示
-
-!!! example "シナリオ2: IRB申請前チェック"
-    自施設の臨床研究で AI 使う前 → `IRB` `同意` `プライバシー` で検索 → 申請書の論点漏れ防止 → <a href="evidence/irb-question-checklist.md">IRB質問チェックリスト</a> DL
-
-!!! example "シナリオ3: 病院AI導入ポリシー作成"
-    委員会で AI 導入規程を起草 → `責任主体` `監査ログ` `セキュリティ` で検索 → <a href="evidence/hospital-ai-adoption-policy.md">病院AI導入ポリシー骨子</a> を骨子に展開
-
-## 論点を引く
-
-<div class="gl-suggest">
-  <button class="gl-suggest-btn" data-query="IRB">IRB</button>
-  <button class="gl-suggest-btn" data-query="透明性">透明性</button>
-  <button class="gl-suggest-btn" data-query="バイアス">バイアス</button>
-  <button class="gl-suggest-btn" data-query="責任主体">責任主体</button>
-</div>
-
-<div id="gl-lookup">
-  <input type="text" id="gl-query" placeholder="例: IRBで何を聞かれる?" aria-label="ガイドライン論点検索">
-  <div id="gl-results"></div>
-</div>
-<script src="assets/lookup.js"></script>
-
-## 📄 すぐ使えるテンプレ (Evidence Pack)
-
-- <a href="evidence/clinician-ai-product-evaluation.md">臨床AI製品導入評価チェックリスト</a>
-- <a href="evidence/patient-ai-intervention-explanation.md">患者AI介入説明文テンプレ</a>
-- <a href="evidence/hospital-ai-adoption-policy.md">病院AI導入ポリシー骨子</a>
-- <a href="evidence/irb-question-checklist.md">IRB質問チェックリスト</a>
-- <a href="evidence/pccp-skeleton.md">PCCP骨子</a>
-
-## 3レイヤー地図
-
-| レイヤー | 論点 |
-|---|---|
-| 規制・責任 | A 適用対象<br>B リスク分類<br>H 責任<br>I 同意プライバシー<br>L 国際整合 |
-| 研究・評価 | F データ品質バイアス<br>K 臨床評価 |
-| 運用・ライフサイクル | C 透明性<br>D 監査ログ<br>E Human oversight<br>G PCCP市販後<br>J セキュリティ<br>M ライフサイクル |
-
-## 概要
-
-臨床医・臨床研究者・医療機関 (医療安全/IT/IRB事務局) が、主要ガイドラインを13論点で横断確認するための引用付き資料です。SaMD製造者の承認申請支援は対象外です。
-
-## 収録ガイドライン
-
-- [EU AI法](guidelines/eu-ai-act.md) (European Parliament and Council of the European Union)
-- [FDA AI/ML SaMDアクションプラン・PCCPガイダンス](guidelines/fda-aiml-saamd-ap.md) (U.S. Food and Drug Administration)
-- [IMDRF SaMD作業部会文書](guidelines/imdrf-samd.md) (International Medical Device Regulators Forum)
-- [ISO/IEC 42001 AIマネジメントシステム](guidelines/iso-iec-42001.md) (ISO/IEC JTC 1/SC 42)
-- [日本医師会 AIの臨床利用答申](guidelines/jmsf-ai-medical.md) (日本医師会)
-- [経済産業省 AI事業者ガイドライン](guidelines/meti-ai-guidelines.md) (経済産業省)
-- [厚労省 医療機器プログラムに関する取扱い](guidelines/mhlw-samd.md) (Ministry of Health, Labour and Welfare)
-- [NIST AIリスクマネジメントフレームワーク](guidelines/nist-ai-rmf.md) (National Institute of Standards and Technology)
-- [PMDA SaMD情報ページ](guidelines/pmda-samd.md) (Pharmaceuticals and Medical Devices Agency)
-- [WHO AI for Health倫理・ガバナンス](guidelines/who-aih.md) (World Health Organization)
-
-## 読み方
-
-- `must`: 明示的な要求または強い義務
-- `should`: 推奨、原則、実施すべき事項
-- `mention`: 言及あり
-- `none`: 扱いなし
-- `not_assessed`: 未評価
-- `source_unavailable`: 出典確認不可
-
+---
+title: Home
 ---
 
-**License / 引用スコープ**: 本サイトのオリジナル編集物 (マトリクス構造・要求強度判定・列定義・要約) は CC-BY 4.0。第三者ガイドライン原文の引用は各権利者帰属 (fair use / 著作権法第32条「引用」の範囲) で、CC-BY 対象外。詳細は [LICENSE](https://github.com/cursorvers/medical-ai-governance-crosswalk/blob/main/LICENSE) 参照。
+<div class="gl-landing">
+  <section class="gl-lp-hero" aria-labelledby="gl-hero-title">
+    <div class="gl-hero-bg-mark" aria-hidden="true"></div>
+    <div class="gl-lp-inner gl-hero-grid">
+      <div class="gl-hero-copy">
+        <p class="gl-eyebrow">医療AI 公開ガイドライン 10本×13論点</p>
+        <h1 id="gl-hero-title">「このAI、安全なんですか？」と患者に聞かれて、<br>外来30秒で根拠を示せるように。</h1>
+        <p class="gl-hero-subcopy">医療AI 公開ガイドライン 10本を、臨床の言葉で横断検索。<br>LLM非依存・静的検索（引用URL直リンク／ハルシネーションなし）。</p>
+      </div>
+
+      <div class="gl-hero-search" aria-label="ガイドライン検索">
+        <p class="gl-search-label">患者説明・院内検討・研究申請の論点を引く</p>
+        <div id="gl-lookup">
+          <input type="text" id="gl-query" placeholder="例: 安全性、説明責任、バイアス" aria-label="医療AIガイドライン論点検索">
+          <div class="gl-suggest" aria-label="検索候補">
+            <button class="gl-suggest-btn" type="button" data-query="安全性">安全性</button>
+            <button class="gl-suggest-btn" type="button" data-query="説明責任">説明責任</button>
+            <button class="gl-suggest-btn" type="button" data-query="バイアス">バイアス</button>
+            <button class="gl-suggest-btn" type="button" data-query="責任主体">責任主体</button>
+          </div>
+          <div id="gl-results"></div>
+        </div>
+      </div>
+    </div>
+    <a class="gl-scroll-hint" href="#clinical-now">外来で今すぐ引く</a>
+  </section>
+
+  <section class="gl-section gl-primary" id="clinical-now" aria-labelledby="clinical-now-title">
+    <div class="gl-lp-inner">
+      <div class="gl-section-heading">
+        <span class="gl-icon gl-icon-stethoscope" aria-hidden="true"></span>
+        <div>
+          <p class="gl-kicker">臨床医向け</p>
+          <h2 id="clinical-now-title">外来で今すぐ引く</h2>
+        </div>
+      </div>
+      <div class="gl-usecase-grid">
+        <button class="gl-usecase-card gl-suggest-btn" type="button" data-query="安全性">
+          <span>患者から聞かれたら</span>
+          <strong>このAIは安全なんですか？</strong>
+          <small>安全性・臨床評価・Human oversight を横断します。</small>
+        </button>
+        <button class="gl-usecase-card gl-suggest-btn" type="button" data-query="説明責任">
+          <span>説明が必要なら</span>
+          <strong>誰が責任を持って説明しますか？</strong>
+          <small>説明責任・透明性・責任主体を確認します。</small>
+        </button>
+        <button class="gl-usecase-card gl-suggest-btn" type="button" data-query="バイアス">
+          <span>不公平が心配なら</span>
+          <strong>患者背景で性能差はありますか？</strong>
+          <small>データ品質・バイアス・同意プライバシーを探します。</small>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="gl-section gl-secondary" aria-labelledby="hospital-title">
+    <div class="gl-lp-inner gl-split">
+      <div class="gl-section-heading">
+        <span class="gl-icon gl-icon-hospital" aria-hidden="true"></span>
+        <div>
+          <p class="gl-kicker">病院AI導入委員会向け</p>
+          <h2 id="hospital-title">病院でAI導入を検討している方へ</h2>
+        </div>
+      </div>
+      <div class="gl-action-panel">
+        <p>院内でAIを使う前に、責任主体、監査ログ、説明、セキュリティ、臨床評価の論点をそろえます。</p>
+        <a class="gl-cta" href="evidence/hospital-ai-policy-skeleton.md">病院AI導入ポリシー骨子 DL</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="gl-section gl-tertiary" aria-labelledby="irb-title">
+    <div class="gl-lp-inner gl-split">
+      <div class="gl-section-heading">
+        <span class="gl-icon gl-icon-irb" aria-hidden="true"></span>
+        <div>
+          <p class="gl-kicker">IRB事務局・臨床研究者向け</p>
+          <h2 id="irb-title">AI使った臨床研究を始める方へ</h2>
+        </div>
+      </div>
+      <div class="gl-action-panel">
+        <p>申請前に、同意、プライバシー、データ品質、バイアス、Human oversight の質問漏れを減らします。</p>
+        <a class="gl-cta gl-cta-secondary" href="evidence/irb-question-checklist.md">IRB質問チェックリスト DL</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="gl-section gl-trust" aria-labelledby="trust-title">
+    <div class="gl-lp-inner">
+      <div class="gl-trust-meta">
+        <div>
+          <p class="gl-kicker">Trust Bar</p>
+          <h2 id="trust-title">収録GL 10本</h2>
+        </div>
+        <p class="gl-last-updated">最終更新日: {{last_updated}}</p>
+      </div>
+      <ol class="gl-guideline-list">
+        <li>PMDA SaMD情報ページ</li>
+        <li>MHLW 医療機器プログラム取扱い</li>
+        <li>FDA AI/ML SaMD アクションプラン + PCCPガイダンス</li>
+        <li>EU AI法</li>
+        <li>IMDRF SaMD作業部会</li>
+        <li>ISO/IEC 42001</li>
+        <li>NIST AI RMF</li>
+        <li>WHO AI for Health</li>
+        <li>日本医師会 AI臨床利用答申</li>
+        <li>経済産業省 AI事業者ガイドライン</li>
+      </ol>
+      <p class="gl-disclaimer">本資料は公開ガイドラインの参照用コンパイルです。法的助言、規制適合性の保証、診療判断ではありません。SaMD製造者の承認申請支援は対象外です。利用前に必ず原文を参照してください。</p>
+    </div>
+  </section>
+
+  <section class="gl-section gl-supervision" aria-labelledby="supervision-title">
+    <div class="gl-lp-inner gl-supervision-grid">
+      <div>
+        <p class="gl-kicker">監修</p>
+        <h2 id="supervision-title">監修者募集中 — GitHub Issuesでご連絡ください</h2>
+        <p>医療安全、臨床研究、病院情報システム、医療機器プログラムの観点から、公開レビューを歓迎します。</p>
+      </div>
+      <div>
+        <p class="gl-kicker">更新履歴</p>
+        <div class="gl-changelog">
+{{changelog_recent5}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="gl-lp-footer">
+    <div class="gl-lp-inner">
+      <p>License: CC-BY 4.0 + MIT</p>
+      <p><a href="https://github.com/cursorvers/medical-ai-governance-crosswalk">GitHub</a> / <a href="https://github.com/cursorvers/medical-ai-governance-crosswalk/issues">Issue</a></p>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/lookup.js"></script>
