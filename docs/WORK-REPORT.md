@@ -195,3 +195,31 @@ GLM (429 Fair Usage) / Gemini (cap 超過) / Cursor (`@anysphere/file-service-da
 - X 告知文投稿
 
 いずれも `Bash` 直接ではなく `/vote` 経由で合議承認を取る手順にしています。
+
+---
+
+## v0.1.3 Public Release (2026-04-20 10:30 JST)
+
+**Status: SHIPPED 🚀**
+
+### Multi-agent合議 (Option C採択)
+- **Codex (sandbox=read-only)**: C最適。24h公開ならGitHub Pages primaryで最短公開、cursorvers.jp/tools/medgov/は紹介・導線リンクに留める。canonical/明確なリンクでSEO分散抑制可能。バズ元公開文脈に最も合う。
+- **GLM (general-reviewer)**: CONDITIONAL_APPROVE for C。Phase1 GitHub Pages公開+X告知、Phase2 cursorvers.jpにリンク追加。risk: SEO価値がcursorvers.jpに蓄積されない → canonical URL をGitHub Pagesに向け対策、将来的301リダイレクト準備推奨。
+
+### 実行済アクション
+- `git init` → commit `238c7bb` (feat v0.1.3) → commit `b919f59` (cursorvers-inc→cursorvers org fix, 35 files)
+- `gh repo create cursorvers/medical-ai-governance-crosswalk --public --source . --push` → [github.com/cursorvers/medical-ai-governance-crosswalk](https://github.com/cursorvers/medical-ai-governance-crosswalk)
+- CI (yamllint + validate_corpus + mkdocs strict + gh-deploy) → SUCCESS 52s
+- `gh api POST /repos/.../pages` で Pages 有効化 (source=gh-pages)
+- 公開URL: [https://cursorvers.github.io/medical-ai-governance-crosswalk/](https://cursorvers.github.io/medical-ai-governance-crosswalk/) → HTTP 200
+- lookup-index.json live: 13 cols × 10 cells = 130 cells + 93 keywords
+- 検索UI (gl-lookup) 埋込確認済
+
+### 残作業 (/vote必要)
+- [ ] **X告知投稿** (4パターン案を `/tmp/kernel-medgov-2026-04-20-hosting/x-announce-draft.md` に保持)
+- [ ] **cursorvers.jp/tools/ にリンク追加** (Phase 2: Cursorvers_Platform repo を別セッションで)
+- [ ] **301 redirect準備** (将来的にcursorvers.jpへ完全移行する場合のため)
+
+### 達成度
+- **v0.1.3 publicリリース: 100%**
+- **Option C 全体計画: ~85%** (残: X告知 + cursorvers.jp側導線追加)
