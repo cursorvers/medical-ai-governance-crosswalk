@@ -27,6 +27,7 @@ title: Home
       </div>
     </div>
     <a class="gl-scroll-hint" href="#clinical-now">外来で今すぐ引く</a>
+    <p class="gl-hero-cta-sub"><a href="usage.md">→ 5つの臨床シナリオで使い方を見る</a>　|　<a href="glossary.md">→ 用語集を見る</a></p>
   </section>
 
   <aside class="gl-disclaimer-strip" role="note">

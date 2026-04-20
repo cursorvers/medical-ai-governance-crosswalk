@@ -16,7 +16,7 @@ GUIDELINES_DIR = CORPUS_DIR / "guidelines"
 COLUMNS_PATH = CORPUS_DIR / "columns" / "columns.yml"
 TEMPLATES_DIR = ROOT / "templates"
 BUILD_EVIDENCE_DIR = ROOT / "build" / "evidence"
-SITE_PUBLIC_EVIDENCE_DIR = ROOT / "site" / "public" / "evidence"
+SITE_PUBLIC_EVIDENCE_DIR = ROOT / "site" / "docs" / "evidence"
 
 SAMD_COLUMNS = ["A", "B", "G", "K", "M"]
 SAMD_GUIDELINES = [

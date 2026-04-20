@@ -32,9 +32,11 @@ hooks:
 - ../scripts/mkdocs_hooks.py
 nav:
 - Home: index.md
+- 使い方シナリオ: usage.md
 - Matrix: matrix.md
 - Evidence: evidence.md
 - Columns: columns.md
+- 用語集: glossary.md
 - Guidelines:
   - EU AI法: guidelines/eu-ai-act.md
   - FDA AI/ML SaMDアクションプラン・PCCPガイダンス: guidelines/fda-aiml-saamd-ap.md
