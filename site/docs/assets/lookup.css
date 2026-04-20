@@ -107,3 +107,35 @@
 .gl-confidence {
   color: var(--md-default-fg-color--light);
 }
+
+.gl-hero {
+  background: var(--md-code-bg-color, #f5f5f5);
+  border-left: 4px solid var(--md-primary-fg-color, #5e35b1);
+  padding: 1em 1.2em;
+  margin: 1em 0 1.5em;
+  border-radius: 4px;
+}
+.gl-hero-tag { font-weight: 600; margin: 0 0 0.4em; font-size: 1.05em; }
+.gl-hero-sub { margin: 0; opacity: 0.85; font-size: 0.92em; }
+
+.gl-suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.6em 0 0.8em;
+}
+.gl-suggest-btn {
+  padding: 0.3em 0.85em;
+  border: 1px solid var(--md-primary-fg-color, #5e35b1);
+  background: transparent;
+  color: var(--md-primary-fg-color, #5e35b1);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.88em;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+}
+.gl-suggest-btn:hover {
+  background: var(--md-primary-fg-color, #5e35b1);
+  color: #fff;
+}

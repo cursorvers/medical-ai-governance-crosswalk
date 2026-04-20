@@ -1,0 +1,1403 @@
+{
+    "columns": {
+        "A": {
+            "name": "適用対象",
+            "name_en": "Applicability scope",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "EU市場・利用のAIに適用し医療機器AIも対象化。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-6",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "AI-DSFを含む医療機器と510(k)等の提出が主対象。",
+                    "citation_url": "https://www.fda.gov/media/166704/download#page=9",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "ハードウェアに属さず医療目的を果たすソフトをSaMDと定義。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-131209-samd-key-definitions-140901.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "should",
+                    "summary": "AI製品・サービスの開発、提供、利用組織を対象にする。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "mention",
+                    "summary": "医療AIの臨床利用全般と医師・患者・AIの関係を対象にする。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=1",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "AI開発者、提供者、利用者を主対象にする。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "must",
+                    "summary": "医療目的と生命健康リスクで医療機器プログラム該当性を判断。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "AIの設計・開発・利用・評価で信頼性リスク管理を促す。",
+                    "citation_url": "https://www.nist.gov/itl/ai-risk-management-framework#main-content",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "must",
+                    "summary": "PMD法上の医療目的かつ重大リスクのソフトウェアを対象化。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#classfication",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "mention",
+                    "summary": "医療AI全般とLMMの医療・公衆衛生利用を対象にする。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=13",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "B": {
+            "name": "リスク分類",
+            "name_en": "Risk classification",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "Annex I対象かAnnex III該当なら高リスクAIに分類。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-6",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "IMDRFリスク分類やFDA便益リスクを踏まえた監督を想定。",
+                    "citation_url": "https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=2",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "医療判断への寄与と状態重大性でIからIVに分類する。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-140918-samd-framework-risk-categorization-141013.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "mention",
+                    "summary": "AI関連リスクと機会を管理する枠組みとして説明される。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "mention",
+                    "summary": "臨床利用を3類型に分け、悪用や制度的リスクも整理する。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=68",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "危害の大きさと蓋然性に応じたリスクベース対応を重視。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "must",
+                    "summary": "クラスIからIVとGHTFルールでリスク程度を判定。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "文脈に応じてリスク許容度、優先度、影響を評価する。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=32",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "mention",
+                    "summary": "承認審査情報として医療機器分類や申請区分への参照あり。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "mention",
+                    "summary": "LMMではリスクベース枠組みと規制負荷差に言及。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=65",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "C": {
+            "name": "透明性",
+            "name_en": "Transparency",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "提供者は導入者へ性能、限界、使用説明を提供する義務。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-13",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "学習データ、入力、ロジック、性能根拠等の透明性を推奨。",
+                    "citation_url": "https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=5",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "mention",
+                    "summary": "定義文、使用目的、表示・利用情報の明確化に言及する。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-131209-samd-key-definitions-140901.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "mention",
+                    "summary": "透明性、トレーサビリティ、信頼性を利点として掲げる。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "should",
+                    "summary": "AI使用の患者通知、透明性措置、医師確認を重視する。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=69",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "ステークホルダーへの情報提供で透明性を高める。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "should",
+                    "summary": "非医療機器表示や根拠の検証可能性で誤認防止を求める。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "透明性、説明可能性、解釈可能性を信頼性特性に含める。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=35",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "not_assessed",
+                    "summary": "Lane Aでは透明性要求の評価未了。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "透明性・説明可能性・理解可能性を中核原則に置く。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=42",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "D": {
+            "name": "監査ログ",
+            "name_en": "Audit logs",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "高リスクAIはライフタイム中の自動ログ記録を技術的に可能にする。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-12",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "PCCPではデータ管理、更新手順、追跡表で変更根拠を残す。",
+                    "citation_url": "https://www.fda.gov/media/166704/download#page=33",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "文書管理、記録管理、構成追跡でトレーサビリティを保つ。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "not_assessed",
+                    "summary": "監査ログ・記録要求は本文未取得で評価未了。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "mention",
+                    "summary": "エラー報告、データ保存、AIモニタリングの必要性に触れる。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=69",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "判断過程、判断根拠等のログ記録・保存を求める。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "mention",
+                    "summary": "個人健康記録の収集・ログ作成は非該当例として言及。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "文書化、インベントリ、来歴、監視結果の記録を求める。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=20",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "not_assessed",
+                    "summary": "Lane Aでは監査ログ要求の評価未了。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "LMMでは第三者監査、影響評価、公開を求める。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=18",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "E": {
+            "name": "Human oversight",
+            "name_en": "Human oversight",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "高リスクAIは自然人による有効な監督を可能に設計する。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-14",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "mention",
+                    "summary": "手動更新や臨床ワークフローで人の入力・判断の役割に触れる。",
+                    "citation_url": "https://www.fda.gov/media/166704/download#page=9",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "mention",
+                    "summary": "ユーザーリスク、使用環境、使用者支援への考慮に言及。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "not_assessed",
+                    "summary": "人間監督の具体要求は本文未取得で評価未了。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "should",
+                    "summary": "医師参加型原則により医師が確認し最終判断を行う。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "人間中心の考え方に基づく開発・提供・利用を求める。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "mention",
+                    "summary": "医療関係者の管理下かを使用者分類で確認。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "人間判断とHuman-AI構成の役割を明確化する。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=30",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "not_assessed",
+                    "summary": "Lane Aでは人の監督要求の評価未了。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "医療判断は人間が管理し、人間監督点を設ける。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=41",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "F": {
+            "name": "データ品質バイアス",
+            "name_en": "Data quality and bias",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "訓練・検証・試験データの品質とバイアス対策を要求。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-10",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "バイアス識別・低減と頑健性評価の方法開発を重視。",
+                    "citation_url": "https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=6",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "データ完全性、臨床データ品質、妥当性の確保を求める。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "not_assessed",
+                    "summary": "データ品質・バイアス要求は本文未取得で評価未了。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "should",
+                    "summary": "バイアス、データセットシフト、精度劣化への注意を求める。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=71",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "データの正確性・最新性と回避不能なバイアス認識を求める。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "should",
+                    "summary": "根拠情報とアルゴリズム妥当性の検証可能性を整理。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "公平性、有害バイアス、データ代表性を測定・管理する。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=23",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "not_assessed",
+                    "summary": "Lane Aではデータ品質・バイアス要求の評価未了。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "低品質・非代表データとバイアスの最小化を重視する。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=44",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "G": {
+            "name": "PCCP市販後",
+            "name_en": "PCCP and post-market",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "市販後監視を置き、重大インシデントを報告する義務。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-72",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "PCCPは予定変更、実装方法、影響評価を提出に含める。",
+                    "citation_url": "https://www.fda.gov/media/166704/download#page=14",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "変更影響評価と市販後実性能データの継続監視を求める。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "not_assessed",
+                    "summary": "PCCP・市販後管理相当の条項は評価未了。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "mention",
+                    "summary": "展開後の能力維持やAIによるAI監視を課題に挙げる。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=51",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "ライフサイクル全体でリスク対策と環境変化対応を行う。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "none",
+                    "summary": "PCCPや市販後監視の明示的扱いは確認できず。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "展開後監視、改善、事故・エラー連絡を管理機能に含める。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=38",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "mention",
+                    "summary": "再評価・再審査の臨床研究相談への言及あり。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "mention",
+                    "summary": "実使用中の継続的評価とリリース後監査に触れる。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=72",
+                    "confidence": "medium"
+                }
+            ]
+        },
+        "H": {
+            "name": "責任",
+            "name_en": "Accountability",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "提供者等の義務とQMS内の責任枠組みを定める。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-17",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "製造業者がPCCPを作成し品質システムで影響評価する。",
+                    "citation_url": "https://www.fda.gov/media/166704/download#page=34",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "SaMD製造者が品質、リスク、ライフサイクル管理を担う。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "mention",
+                    "summary": "方針、目的、プロセスによる責任あるAI管理を扱う。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "should",
+                    "summary": "医師、開発者、行政を含む責任分担の必要性を示す。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=72",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "各主体の役割に応じ合理的範囲で説明責任を果たす。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "should",
+                    "summary": "事業者・開発者が使用者、目的、処理方法を確認整理。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "役割、責任、説明責任メカニズムを組織に求める。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=28",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "mention",
+                    "summary": "製造販売業者からの相談申込みを前提に助言提供。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "責任と説明責任、被害救済、価値連鎖上の責任を求める。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=44",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "I": {
+            "name": "同意プライバシー",
+            "name_en": "Consent and privacy",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "個人データ保護法を維持し、特殊データ処理に保護条件を課す。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-10",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "mention",
+                    "summary": "患者中心の信頼・透明性を扱うが同意手続は主題外。",
+                    "citation_url": "https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=5",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "患者データ等の機密性と安全な保管・廃棄を考慮する。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "not_assessed",
+                    "summary": "同意・プライバシー要求は本文未取得で評価未了。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "should",
+                    "summary": "機微な診療情報の機密性、不正アクセス防止、同意を重視する。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=54",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "個人情報保護法等を踏まえプライバシー保護を検討する。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "mention",
+                    "summary": "個人健康記録の保存・共有例はあるが同意義務は未確認。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "プライバシー強化と同意等の生成AIプライバシーリスクを扱う。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=24",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "not_assessed",
+                    "summary": "Lane Aでは同意・プライバシー要求の評価未了。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "プライバシー、機密性、有効な同意、データ保護を要求する。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=41",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "J": {
+            "name": "セキュリティ",
+            "name_en": "Security",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "正確性、堅牢性、サイバーセキュリティ水準を確保する義務。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-15",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "mention",
+                    "summary": "GMLPを医療機器サイバーセキュリティ施策と連携すると記載。",
+                    "citation_url": "https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=4",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "情報セキュリティ、脅威分析、脆弱性対策を安全と統合する。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "not_assessed",
+                    "summary": "セキュリティ要求は本文未取得で評価未了。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "should",
+                    "summary": "診療情報の情報セキュリティとAI攻撃対策を慎重に検討する。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "不正操作や外部攻撃に備えセキュリティを確保する。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "none",
+                    "summary": "セキュリティ要求の明示的扱いは確認できず。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "セキュアでレジリエントなAIと情報セキュリティを評価する。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=21",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "not_assessed",
+                    "summary": "Lane Aではセキュリティ要求の評価未了。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "mention",
+                    "summary": "安全性とサイバーセキュリティ上のリスクを扱う。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=18",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "K": {
+            "name": "臨床評価",
+            "name_en": "Clinical evaluation",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "意図目的に照らした試験・妥当性確認と性能指標を要求。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-9",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "PCCPの性能評価・検証妥当性確認で安全有効性を示す。",
+                    "citation_url": "https://www.fda.gov/media/166704/download#page=31",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "臨床関連性、分析妥当性、臨床妥当性の三要素で評価する。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "not_assessed",
+                    "summary": "臨床評価要求は本文未取得で評価未了。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "mention",
+                    "summary": "診断・治療補助では性能、透明性、医師判断への影響を検討する。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=70",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "none",
+                    "summary": "医療AI固有の臨床評価要求は本編確認範囲で扱いなし。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "mention",
+                    "summary": "治験・臨床研究での提供と適用関係に言及。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "TEVV、妥当性、信頼性、性能限界を測定・文書化する。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=34",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "should",
+                    "summary": "治験相談で承認申請上の評価充足性を確認。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "安全性、正確性、有効性、性能証明を重視する。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=42",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "L": {
+            "name": "国際整合",
+            "name_en": "International alignment",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "mention",
+                    "summary": "整合規格・共通仕様と既存EU整合法令との接続を規定。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-40",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "mention",
+                    "summary": "GMLP標準化やIMDRF等との国際調和を推進。",
+                    "citation_url": "https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=4",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "各国規制当局のSaMD用語・管理原則の収束を目的とする。",
+                    "citation_url": "https://www.imdrf.org/working-groups/software-medical-device-samd",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "mention",
+                    "summary": "AI管理システムの国際標準として位置づけられる。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "mention",
+                    "summary": "WMA声明、日本AI法、国際倫理と国内戦略の整合を整理する。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "mention",
+                    "summary": "NIST、ISO、EU AI法等の海外原則・標準を参照する。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "mention",
+                    "summary": "GHTF分類を用い、IMDRF分類因子は参考可能と記載。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "mention",
+                    "summary": "他のリスク管理努力との整合と国際的利用を意図する。",
+                    "citation_url": "https://www.nist.gov/itl/ai-risk-management-framework#main-content",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "mention",
+                    "summary": "国際調和、DASH 2の国際展開、Science Board資料に言及。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#dash",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "LMMと医療AIの国際的な協調ガバナンスを求める。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=78",
+                    "confidence": "high"
+                }
+            ]
+        },
+        "M": {
+            "name": "ライフサイクル",
+            "name_en": "Lifecycle",
+            "cells": [
+                {
+                    "guideline": "EU AI法",
+                    "guideline_id": "eu-ai-act",
+                    "strength": "must",
+                    "summary": "リスク管理、QMS、市販後監視を通じた継続管理を要求。",
+                    "citation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-72",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "FDA AI/ML SaMDアクションプラン・PCCPガイダンス",
+                    "guideline_id": "fda-aiml-saamd-ap",
+                    "strength": "should",
+                    "summary": "開発前から市販後までTPLC監督とRWP監視を重視。",
+                    "citation_url": "https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=7",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "IMDRF SaMD作業部会文書",
+                    "guideline_id": "imdrf-samd",
+                    "strength": "should",
+                    "summary": "計画、開発、検証、展開、保守、廃止までQMSで管理する。",
+                    "citation_url": "https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "ISO/IEC 42001 AIマネジメントシステム",
+                    "guideline_id": "iso-iec-42001",
+                    "strength": "should",
+                    "summary": "AIMSの確立、実施、維持、継続的改善を要求する。",
+                    "citation_url": "https://www.iso.org/standard/81230.html",
+                    "confidence": "low"
+                },
+                {
+                    "guideline": "日本医師会 AIの臨床利用答申",
+                    "guideline_id": "jmsf-ai-medical",
+                    "strength": "mention",
+                    "summary": "医師会の継続的関与と新たなガバナンス体制を求める。",
+                    "citation_url": "https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=56",
+                    "confidence": "medium"
+                },
+                {
+                    "guideline": "経済産業省 AI事業者ガイドライン",
+                    "guideline_id": "meti-ai-guidelines",
+                    "strength": "should",
+                    "summary": "AIライフサイクル全体で自主的な対策実行を促す。",
+                    "citation_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "厚労省 医療機器プログラムに関する取扱い",
+                    "guideline_id": "mhlw-samd",
+                    "strength": "mention",
+                    "summary": "規制範囲は今後変更可能で、適正使用周知にも言及。",
+                    "citation_url": "https://www.mhlw.go.jp/content/11120000/001082227.pdf",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "NIST AIリスクマネジメントフレームワーク",
+                    "guideline_id": "nist-ai-rmf",
+                    "strength": "should",
+                    "summary": "Govern/Map/Measure/ManageをAIライフサイクル全体に適用する。",
+                    "citation_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=26",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "PMDA SaMD情報ページ",
+                    "guideline_id": "pmda-samd",
+                    "strength": "mention",
+                    "summary": "最新情報更新、審査ポイント整備、相談体制強化に言及。",
+                    "citation_url": "https://www.pmda.go.jp/english/review-services/reviews/0009.html#dash",
+                    "confidence": "high"
+                },
+                {
+                    "guideline": "WHO AI for Health倫理・ガバナンス",
+                    "guideline_id": "who-aih",
+                    "strength": "should",
+                    "summary": "設計、導入、実使用中の継続評価を求める。",
+                    "citation_url": "https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=46",
+                    "confidence": "high"
+                }
+            ]
+        }
+    },
+    "keywords": {
+        "IRB": [
+            "K"
+        ],
+        "倫理審査": [
+            "K"
+        ],
+        "臨床研究": [
+            "K"
+        ],
+        "治験": [
+            "K"
+        ],
+        "臨床評価": [
+            "K"
+        ],
+        "研究計画": [
+            "K"
+        ],
+        "study design": [
+            "K"
+        ],
+        "clinical evaluation": [
+            "K"
+        ],
+        "clinical study": [
+            "K"
+        ],
+        "透明性": [
+            "C"
+        ],
+        "説明可能性": [
+            "C"
+        ],
+        "ブラックボックス": [
+            "C"
+        ],
+        "説明": [
+            "C"
+        ],
+        "XAI": [
+            "C"
+        ],
+        "interpretability": [
+            "C"
+        ],
+        "transparency": [
+            "C"
+        ],
+        "explainability": [
+            "C"
+        ],
+        "監査": [
+            "D"
+        ],
+        "ログ": [
+            "D"
+        ],
+        "記録": [
+            "D"
+        ],
+        "audit": [
+            "D"
+        ],
+        "traceability": [
+            "D"
+        ],
+        "audit log": [
+            "D"
+        ],
+        "recordkeeping": [
+            "D"
+        ],
+        "バイアス": [
+            "F"
+        ],
+        "偏り": [
+            "F"
+        ],
+        "データ品質": [
+            "F"
+        ],
+        "代表性": [
+            "F"
+        ],
+        "fairness": [
+            "F"
+        ],
+        "bias": [
+            "F"
+        ],
+        "data quality": [
+            "F"
+        ],
+        "representativeness": [
+            "F"
+        ],
+        "同意": [
+            "I"
+        ],
+        "プライバシー": [
+            "I"
+        ],
+        "個人情報": [
+            "I"
+        ],
+        "consent": [
+            "I"
+        ],
+        "privacy": [
+            "I"
+        ],
+        "患者情報": [
+            "I"
+        ],
+        "personal data": [
+            "I"
+        ],
+        "医師監督": [
+            "E"
+        ],
+        "human in the loop": [
+            "E"
+        ],
+        "oversight": [
+            "E"
+        ],
+        "人間監督": [
+            "E"
+        ],
+        "責任者": [
+            "E"
+        ],
+        "human oversight": [
+            "E"
+        ],
+        "HITL": [
+            "E"
+        ],
+        "責任": [
+            "H"
+        ],
+        "医師法": [
+            "H"
+        ],
+        "責任主体": [
+            "H"
+        ],
+        "accountability": [
+            "H"
+        ],
+        "liability": [
+            "H"
+        ],
+        "responsibility": [
+            "H"
+        ],
+        "リスク": [
+            "B"
+        ],
+        "高リスク": [
+            "B"
+        ],
+        "リスク分類": [
+            "B"
+        ],
+        "risk class": [
+            "B"
+        ],
+        "危険性": [
+            "B"
+        ],
+        "risk classification": [
+            "B"
+        ],
+        "high risk": [
+            "B"
+        ],
+        "適用": [
+            "A"
+        ],
+        "該当性": [
+            "A"
+        ],
+        "対象": [
+            "A"
+        ],
+        "scope": [
+            "A"
+        ],
+        "applicability": [
+            "A"
+        ],
+        "SaMD該当": [
+            "A"
+        ],
+        "intended use": [
+            "A"
+        ],
+        "セキュリティ": [
+            "J"
+        ],
+        "サイバー": [
+            "J"
+        ],
+        "暗号化": [
+            "J"
+        ],
+        "security": [
+            "J"
+        ],
+        "cyber": [
+            "J"
+        ],
+        "cybersecurity": [
+            "J"
+        ],
+        "encryption": [
+            "J"
+        ],
+        "PCCP": [
+            "G"
+        ],
+        "市販後": [
+            "G"
+        ],
+        "変更管理": [
+            "G"
+        ],
+        "post-market": [
+            "G"
+        ],
+        "update": [
+            "G"
+        ],
+        "change control": [
+            "G"
+        ],
+        "postmarket": [
+            "G"
+        ],
+        "国際": [
+            "L"
+        ],
+        "整合": [
+            "L"
+        ],
+        "IMDRF": [
+            "L"
+        ],
+        "harmonization": [
+            "L"
+        ],
+        "international alignment": [
+            "L"
+        ],
+        "global": [
+            "L"
+        ],
+        "ライフサイクル": [
+            "M"
+        ],
+        "運用": [
+            "M"
+        ],
+        "教育": [
+            "M"
+        ],
+        "lifecycle": [
+            "M"
+        ],
+        "TPLC": [
+            "M"
+        ],
+        "maintenance": [
+            "M"
+        ],
+        "training": [
+            "M"
+        ]
+    }
+}

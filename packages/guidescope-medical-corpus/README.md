@@ -1,8 +1,6 @@
 # @cursorversinc/guidescope-medical-corpus
 
-Medical AI governance crosswalk corpus for GuideScope-compatible consumers.
-
-The package exports the `medical-paper-governance` guideline corpus as typed JavaScript objects. The current corpus covers 10 guideline sources across 13 governance columns.
+公開ガイドライン10本×論点13列=130セルの構造化コーパスです。GuideScope や MCP tools から、医療 AI ガバナンスの横断論点、要求水準、引用情報を型付きデータとして参照できます。
 
 ## Install
 
@@ -10,39 +8,96 @@ The package exports the `medical-paper-governance` guideline corpus as typed Jav
 npm install @cursorversinc/guidescope-medical-corpus
 ```
 
-## Usage
+## Quickstart
+
+### List guideline names
 
 ```ts
 import { guidelines } from "@cursorversinc/guidescope-medical-corpus";
 
 for (const guideline of guidelines) {
-  console.log(guideline.id, guideline.name_en, guideline.cells.length);
+  console.log(guideline.name_en);
 }
 ```
 
-You can also import the TypeScript types:
+### Find a cell by guideline and column
 
 ```ts
-import type { Guideline, Cell, Citation } from "@cursorversinc/guidescope-medical-corpus";
+import { guidelines, type Cell } from "@cursorversinc/guidescope-medical-corpus";
+
+function findCell(guideline_id: string, column_id: string): Cell | undefined {
+  return guidelines
+    .find((guideline) => guideline.id === guideline_id)
+    ?.cells.find((cell) => cell.column === column_id);
+}
+
+const cell = findCell("pmda-samd", "clinical_evaluation");
+console.log(cell?.summary_ja);
 ```
 
-## Build From Source
+### Filter must-level cells
 
-```sh
-npm install
-npm run build
+```ts
+import { guidelines } from "@cursorversinc/guidescope-medical-corpus";
+
+const mustCells = guidelines.flatMap((guideline) =>
+  guideline.cells
+    .filter((cell) => cell.requirement === "must")
+    .map((cell) => ({ guideline, cell }))
+);
+
+for (const { guideline, cell } of mustCells) {
+  console.log(guideline.id, cell.column, cell.summary_ja);
+}
 ```
 
-The build reads `../../corpus/guidelines/*.yml`, writes `dist/corpus.json`, and compiles `dist/index.js` plus `dist/index.d.ts`.
+## Schema reference
 
-## License And Attribution
+```ts
+export interface Guideline {
+  id: string;
+  name_ja: string;
+  name_en: string;
+  issuer: string;
+  jurisdiction: string;
+  type: string;
+  url: string;
+  source_documents?: Array<{ url: string; note_ja?: string; note_en?: string }>;
+  tags?: string[];
+  summary_ja?: string;
+  cells: Cell[];
+}
 
-This package is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+export interface Cell {
+  column: string;
+  requirement: "must" | "should" | "mention" | "none" | "not_assessed" | "source_unavailable";
+  summary_ja: string;
+  citation: Citation;
+  notes_ja?: string;
+}
 
-Attribution: Copyright (c) 2026 Cursorvers Inc.
+export interface Citation {
+  url: string;
+  section?: string;
+  retrieved?: string;
+  confidence?: "high" | "medium" | "low";
+}
+```
 
-The CC-BY 4.0 license applies only to the original compilation, summarization, structure, and commentary authored by Cursorvers Inc. Third-party guideline texts and source documents remain the property of their respective rights holders.
+## Source
 
-## Disclaimer
+The source corpus YAML files are maintained at:
 
-This package is a reference corpus of publicly available medical AI governance materials. It is not legal advice, regulatory compliance certification, clinical guidance, or medical advice. The original source documents always take precedence. Consult qualified legal, regulatory, clinical, and business professionals before making decisions based on this corpus.
+https://github.com/cursorvers/medical-ai-governance-crosswalk/tree/main/corpus/guidelines
+
+## License
+
+CC-BY-4.0 for corpus content and MIT for package code.
+
+## Versioning policy
+
+This package follows semver.
+
+- Patch: typo fixes, citation corrections, or non-schema content refinements.
+- Minor: new guideline sources or governance columns.
+- Major: schema changes that require consumer code updates.

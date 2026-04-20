@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "generated_at": "2026-04-20T00:09:31.682Z",
+  "generated_at": "2026-04-20T02:29:38.970Z",
   "source": "medical-paper-governance/corpus/guidelines/*.yml",
   "guideline_count": 10,
   "guidelines": [

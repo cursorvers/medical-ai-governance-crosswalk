@@ -2,11 +2,44 @@
 
 > **DISCLAIMER**: 本資料は公開ガイドラインの参照用コンパイルです。法的助言、規制適合性の保証、診療判断ではありません。利用前に必ず原文を参照してください。
 
+<div class="gl-hero">
+  <p class="gl-hero-tag">医療AIの公開ガイドライン10本×論点13列を、外来30秒で引けるクロスウォーク</p>
+  <p class="gl-hero-sub">臨床医・研究者・医療機関 "使う側" の意思決定支援 / LLM非依存・静的検索（ハルシネーション回避）</p>
+</div>
+
+## 3つの使い方シナリオ
+
+!!! tip "シナリオ1: 外来中30秒"
+    患者から「このAI診断の安全性は？」と聞かれた → 検索ボックスに `透明性` `説明可能性` と入れる → 該当列の10ガイドラインの要求レベル(must/should/mention)即提示
+
+!!! example "シナリオ2: IRB申請前チェック"
+    自施設の臨床研究で AI 使う前 → `IRB` `同意` `プライバシー` で検索 → 申請書の論点漏れ防止 → <a href="evidence/irb-question-checklist.md">IRB質問チェックリスト</a> DL
+
+!!! example "シナリオ3: 病院AI導入ポリシー作成"
+    委員会で AI 導入規程を起草 → `責任主体` `監査ログ` `セキュリティ` で検索 → <a href="evidence/hospital-ai-adoption-policy.md">病院AI導入ポリシー骨子</a> を骨子に展開
+
+## 論点を引く
+
+<div class="gl-suggest">
+  <button class="gl-suggest-btn" data-query="IRB">IRB</button>
+  <button class="gl-suggest-btn" data-query="透明性">透明性</button>
+  <button class="gl-suggest-btn" data-query="バイアス">バイアス</button>
+  <button class="gl-suggest-btn" data-query="責任主体">責任主体</button>
+</div>
+
 <div id="gl-lookup">
   <input type="text" id="gl-query" placeholder="例: IRBで何を聞かれる?" aria-label="ガイドライン論点検索">
   <div id="gl-results"></div>
 </div>
 <script src="assets/lookup.js"></script>
+
+## 📄 すぐ使えるテンプレ (Evidence Pack)
+
+- <a href="evidence/clinician-ai-product-evaluation.md">臨床AI製品導入評価チェックリスト</a>
+- <a href="evidence/patient-ai-intervention-explanation.md">患者AI介入説明文テンプレ</a>
+- <a href="evidence/hospital-ai-adoption-policy.md">病院AI導入ポリシー骨子</a>
+- <a href="evidence/irb-question-checklist.md">IRB質問チェックリスト</a>
+- <a href="evidence/pccp-skeleton.md">PCCP骨子</a>
 
 ## 3レイヤー地図
 

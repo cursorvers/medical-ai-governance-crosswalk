@@ -1,0 +1,12 @@
+{
+  "name": "medical-paper-governance-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Workspace root for medical-paper-governance JS/TS packages (pnpm workspace).",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "build:mcp": "pnpm -F @cursorversinc/medgov-mcp build",
+    "build:cli": "pnpm -F @cursorversinc/medgov-cli build",
+    "build:all": "pnpm -F @cursorversinc/medgov-mcp build && pnpm -F @cursorversinc/medgov-cli build"
+  }
+}

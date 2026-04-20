@@ -1,0 +1,111 @@
+name: Source Freshness
+
+"on":
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 1 * *"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install requests pyyaml
+
+      - name: Check source freshness
+        run: >
+          python scripts/check_source_freshness.py
+          --baseline state/source-freshness.json
+          --output state/source-freshness-report.json
+
+      - name: Prepare drift issue
+        id: drift
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          report_path = Path("state/source-freshness-report.json")
+          report = json.loads(report_path.read_text(encoding="utf-8"))
+          drift = report.get("drift", [])
+          changed = int(report.get("changed", 0))
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+              handle.write(f"changed={changed}\n")
+
+          if not drift:
+              raise SystemExit(0)
+
+          lines = [
+              "# Source freshness drift detected",
+              "",
+              f"- Checked at: `{report.get('checked_at')}`",
+              f"- Unique URLs checked: `{report.get('total')}`",
+              f"- Changed URLs: `{report.get('changed')}`",
+              f"- Fetch errors: `{report.get('errors')}`",
+              "",
+              "## Drift",
+              "",
+          ]
+          for index, item in enumerate(drift, start=1):
+              old = item.get("old") or {}
+              new = item.get("new") or {}
+              lines.extend(
+                  [
+                      f"{index}. `{item.get('guideline_id')}` column `{item.get('column')}`",
+                      f"   - URL: {item.get('url')}",
+                      f"   - Old hash: `{old.get('sha256')}`",
+                      f"   - New hash: `{new.get('sha256')}`",
+                      f"   - Old ETag: `{old.get('etag')}`",
+                      f"   - New ETag: `{new.get('etag')}`",
+                      f"   - Last-Modified: `{old.get('last_modified')}` -> `{new.get('last_modified')}`",
+                      f"   - Sample fetch: `{item.get('sample_diff_fetch_curl')}`",
+                      "",
+                  ]
+              )
+
+          if report.get("errors_detail"):
+              lines.extend(["## Fetch Errors", ""])
+              for item in report["errors_detail"]:
+                  lines.append(
+                      f"- `{item.get('guideline_id')}` column `{item.get('column')}` "
+                      f"{item.get('url')}: {item.get('message') or item.get('error')}"
+                  )
+              lines.append("")
+
+          Path("state/source-freshness-issue.md").write_text(
+              "\n".join(lines),
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Create drift issue
+        if: steps.drift.outputs.changed != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create corpus --color 0e8a16 --description "Corpus maintenance" || true
+          gh label create auto-detected --color d4c5f9 --description "Created by scheduled automation" || true
+          gh issue create \
+            --title "Source freshness drift detected" \
+            --body-file state/source-freshness-issue.md \
+            --label corpus \
+            --label auto-detected
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: source-freshness-report
+          path: state/source-freshness-report.json
+          retention-days: 90

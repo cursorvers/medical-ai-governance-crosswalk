@@ -34,6 +34,8 @@
 
 外来の合間に確認したい場合は、トップページ冒頭の検索ボックスに日本語で質問を入れると、該当コラムの10ガイドラインセルが即表示されます。LLMや外部APIは使わず、静的に生成したキーワード対応表と引用付きセルだけを表示します。
 
+Source freshness は monthly cron で半自動チェックします。`corpus/guidelines/*.yml` の引用 URL を取得して `state/source-freshness.json` の baseline と比較し、drift があれば GitHub Issue を自動起票します。詳細は [docs/MAINTENANCE.md](docs/MAINTENANCE.md) を参照してください。
+
 ## Evidence Pack の使い方
 
 Evidence Pack は、crosswalk の引用付きセルを臨床導入評価、患者説明、院内ポリシー、倫理審査前チェック、変更管理レビューに使いやすい Markdown テンプレートへ束ねる補助資料です。テンプレートは入口であり、最終判断は所属機関の規程と専門家レビューを通してください。

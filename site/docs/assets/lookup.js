@@ -36,10 +36,22 @@
     out.innerHTML = columns.map(renderColumn).join("");
   }
 
+  function wireSuggestButtons() {
+    const input = document.getElementById('gl-query');
+    document.querySelectorAll('.gl-suggest-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        input.value = btn.dataset.query;
+        input.dispatchEvent(new Event('input'));
+        input.focus();
+      });
+    });
+  }
+
   fetch("assets/lookup-index.json").then((r) => r.json()).then((data) => {
     index = data;
     emptyState();
     input.addEventListener("input", () => search(input.value));
+    wireSuggestButtons();
     out.addEventListener("click", (e) => {
       if (e.target.dataset && e.target.dataset.col) {
         input.value = e.target.textContent;

@@ -1,0 +1,43 @@
+{
+  "name": "@cursorversinc/medgov-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server exposing the medical AI governance crosswalk (PMDA / FDA / EU AI Act / WHO / IMDRF / ISO-IEC 42001 / NIST AI RMF / MHLW / METI / JMA) — 13 columns x 10 guidelines.",
+  "license": "CC-BY-4.0",
+  "main": "dist/index.js",
+  "bin": {
+    "medgov-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "medical-ai",
+    "governance",
+    "pmda",
+    "fda",
+    "eu-ai-act",
+    "nist-ai-rmf",
+    "claude-desktop",
+    "cursor"
+  ],
+  "scripts": {
+    "prebuild": "node -e \"require('fs').cpSync('../../site/docs/assets/lookup-index.json','src/lookup-index.json')\"",
+    "build": "tsc -p tsconfig.json && node -e \"const f='dist/index.js';const fs=require('fs');const s=fs.readFileSync(f,'utf8');if(!s.startsWith('#!'))fs.writeFileSync(f,'#!/usr/bin/env node\\n'+s);fs.chmodSync(f,0o755)\"",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
