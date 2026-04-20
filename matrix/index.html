@@ -1,0 +1,1024 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://cursorvers.github.io/medical-ai-governance-crosswalk/matrix/">
+      
+      
+        <link rel="prev" href="../usage/">
+      
+      
+        <link rel="next" href="../evidence/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Matrix - Medical AI Governance Crosswalk</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,300i,400,400i,700,700i%7CNoto+Sans+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans JP";--md-code-font:"Noto Sans Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/lookup.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <meta property="og:image" content="https://cursorvers.github.io/medical-ai-governance-crosswalk/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://cursorvers.github.io/medical-ai-governance-crosswalk/assets/og.png">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#13" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href=".." title="Medical AI Governance Crosswalk" class="md-header__button md-logo" aria-label="Medical AI Governance Crosswalk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Medical AI Governance Crosswalk
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Matrix
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Medical AI Governance Crosswalk" class="md-nav__button md-logo" aria-label="Medical AI Governance Crosswalk" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Medical AI Governance Crosswalk
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使い方シナリオ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../columns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Columns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用語集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guidelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/eu-ai-act/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/fda-aiml-saamd-ap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FDA AI/ML SaMDアクションプラン・PCCPガイダンス
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/imdrf-samd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IMDRF SaMD作業部会文書
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/iso-iec-42001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISO/IEC 42001 AIマネジメントシステム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/jmsf-ai-medical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    日本医師会 AIの臨床利用答申
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/meti-ai-guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    経済産業省 AI事業者ガイドライン
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/mhlw-samd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    厚労省 医療機器プログラムに関する取扱い
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/nist-ai-rmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NIST AIリスクマネジメントフレームワーク
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/pmda-samd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PMDA SaMD情報ページ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guidelines/who-aih/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WHO AI for Health倫理・ガバナンス
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="13">13列マトリクス</h1>
+<blockquote>
+<p><strong>DISCLAIMER</strong>: 本資料は公開ガイドラインの参照用コンパイルです。法的助言、規制適合性の保証、診療判断ではありません。利用前に必ず原文を参照してください。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>ガイドライン</th>
+<th>A 適用対象</th>
+<th>B リスク分類</th>
+<th>C 透明性</th>
+<th>D 監査ログ</th>
+<th>E Human oversight</th>
+<th>F データ品質バイアス</th>
+<th>G PCCP市販後</th>
+<th>H 責任</th>
+<th>I 同意プライバシー</th>
+<th>J セキュリティ</th>
+<th>K 臨床評価</th>
+<th>L 国際整合</th>
+<th>M ライフサイクル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../guidelines/eu-ai-act/">EU AI法</a></td>
+<td>🔴 EU市場・利用のAIに適用し医療機器AIも対象化。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-6">Article 2(1); Article 6(1); Annex I Section A points 11-12 / medium</a></td>
+<td>🔴 Annex I対象かAnnex III該当なら高リスクAIに分類。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-6">Article 6(1)-(4); Annex III point 5(a), 5(d) / medium</a></td>
+<td>🔴 提供者は導入者へ性能、限界、使用説明を提供する義務。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-13">Article 13(1)-(3) / medium</a></td>
+<td>🔴 高リスクAIはライフタイム中の自動ログ記録を技術的に可能にする。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-12">Article 12(1)-(2); Article 21(2) / medium</a></td>
+<td>🔴 高リスクAIは自然人による有効な監督を可能に設計する。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-14">Article 14(1)-(5) / medium</a></td>
+<td>🔴 訓練・検証・試験データの品質とバイアス対策を要求。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-10">Article 10(1)-(5) / medium</a></td>
+<td>🔴 市販後監視を置き、重大インシデントを報告する義務。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-72">Article 72(1)-(4); Article 73(1) / medium</a></td>
+<td>🔴 提供者等の義務とQMS内の責任枠組みを定める。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-17">Article 16; Article 17(1)(m) / medium</a></td>
+<td>🔴 個人データ保護法を維持し、特殊データ処理に保護条件を課す。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-10">Article 2(7); Article 10(5) / medium</a></td>
+<td>🔴 正確性、堅牢性、サイバーセキュリティ水準を確保する義務。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-15">Article 15(1)-(5) / medium</a></td>
+<td>🔴 意図目的に照らした試験・妥当性確認と性能指標を要求。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-9">Article 9(6)-(8); Article 15(1)-(4) / medium</a></td>
+<td>🔵 整合規格・共通仕様と既存EU整合法令との接続を規定。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-40">Article 8(2); Article 40; Article 41 / medium</a></td>
+<td>🔴 リスク管理、QMS、市販後監視を通じた継続管理を要求。<br><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689#art-72">Article 9(2); Article 17(1); Article 72 / medium</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/fda-aiml-saamd-ap/">FDA AI/ML SaMDアクションプラン・PCCPガイダンス</a></td>
+<td>🟠 AI-DSFを含む医療機器と510(k)等の提出が主対象。<br><a href="https://www.fda.gov/media/166704/download#page=9">PCCP Guidance, Section III Scope / high</a></td>
+<td>🟠 IMDRFリスク分類やFDA便益リスクを踏まえた監督を想定。<br><a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=2">Introduction &amp; Background; Action 1 / high</a></td>
+<td>🟠 学習データ、入力、ロジック、性能根拠等の透明性を推奨。<br><a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=5">Action 3 Patient-Centered Approach Incorporating Transparency to Users / high</a></td>
+<td>🟠 PCCPではデータ管理、更新手順、追跡表で変更根拠を残す。<br><a href="https://www.fda.gov/media/166704/download#page=33">PCCP Guidance, Section VII.C Traceability / high</a></td>
+<td>🔵 手動更新や臨床ワークフローで人の入力・判断の役割に触れる。<br><a href="https://www.fda.gov/media/166704/download#page=9">PCCP Guidance, Section III Scope / high</a></td>
+<td>🟠 バイアス識別・低減と頑健性評価の方法開発を重視。<br><a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=6">Action 4 Regulatory Science Methods Related to Algorithm Bias &amp; Robustness / high</a></td>
+<td>🟠 PCCPは予定変更、実装方法、影響評価を提出に含める。<br><a href="https://www.fda.gov/media/166704/download#page=14">PCCP Guidance, Section V Policy for Predetermined Change Control Plans / high</a></td>
+<td>🟠 製造業者がPCCPを作成し品質システムで影響評価する。<br><a href="https://www.fda.gov/media/166704/download#page=34">PCCP Guidance, Section VIII Impact Assessment / high</a></td>
+<td>🔵 患者中心の信頼・透明性を扱うが同意手続は主題外。<br><a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=5">Action 3 Patient-Centered Approach Incorporating Transparency to Users / medium</a></td>
+<td>🔵 GMLPを医療機器サイバーセキュリティ施策と連携すると記載。<br><a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=4">Action 2 Good Machine Learning Practice (GMLP) / high</a></td>
+<td>🟠 PCCPの性能評価・検証妥当性確認で安全有効性を示す。<br><a href="https://www.fda.gov/media/166704/download#page=31">PCCP Guidance, Section VII.B(3) Performance evaluation / high</a></td>
+<td>🔵 GMLP標準化やIMDRF等との国際調和を推進。<br><a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=4">Action 2 Good Machine Learning Practice (GMLP) / high</a></td>
+<td>🟠 開発前から市販後までTPLC監督とRWP監視を重視。<br><a href="https://www.fda.gov/files/medical%20devices/published/AIML-SaMD-Action-Plan.pdf#page=7">Introduction &amp; Background; Action 5 Real-World Performance (RWP) / high</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/imdrf-samd/">IMDRF SaMD作業部会文書</a></td>
+<td>🟠 ハードウェアに属さず医療目的を果たすソフトをSaMDと定義。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-131209-samd-key-definitions-140901.pdf">N10 Section 5.1 Software as a Medical Device / high</a></td>
+<td>🟠 医療判断への寄与と状態重大性でIからIVに分類する。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-140918-samd-framework-risk-categorization-141013.pdf">N12 Sections 7.1-7.3 / high</a></td>
+<td>🔵 定義文、使用目的、表示・利用情報の明確化に言及する。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-131209-samd-key-definitions-140901.pdf">N10 Sections 5.4-5.5 / high</a></td>
+<td>🟠 文書管理、記録管理、構成追跡でトレーサビリティを保つ。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf">N23 Sections 7.4-7.5 / high</a></td>
+<td>🔵 ユーザーリスク、使用環境、使用者支援への考慮に言及。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf">N23 Sections 7.3; 8.5 / medium</a></td>
+<td>🟠 データ完全性、臨床データ品質、妥当性の確保を求める。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf">N41 Sections 6.0-7.0 / high</a></td>
+<td>🟠 変更影響評価と市販後実性能データの継続監視を求める。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf">N41 Sections 8.3-8.4 / high</a></td>
+<td>🟠 SaMD製造者が品質、リスク、ライフサイクル管理を担う。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf">N23 Sections 6.0-7.0 / high</a></td>
+<td>🟠 患者データ等の機密性と安全な保管・廃棄を考慮する。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf">N23 Sections 8.2; 8.6 / high</a></td>
+<td>🟠 情報セキュリティ、脅威分析、脆弱性対策を安全と統合する。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf">N23 Sections 7.3; 8.3; 8.6 / high</a></td>
+<td>🟠 臨床関連性、分析妥当性、臨床妥当性の三要素で評価する。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-170921-samd-n41-clinical-evaluation_1.pdf">N41 Sections 5.0-7.0 / high</a></td>
+<td>🟠 各国規制当局のSaMD用語・管理原則の収束を目的とする。<br><a href="https://www.imdrf.org/working-groups/software-medical-device-samd">Working Group charter / high</a></td>
+<td>🟠 計画、開発、検証、展開、保守、廃止までQMSで管理する。<br><a href="https://www.imdrf.org/sites/default/files/docs/imdrf/final/technical/imdrf-tech-151002-samd-qms.pdf">N23 Sections 7.0-8.6 / high</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/iso-iec-42001/">ISO/IEC 42001 AIマネジメントシステム</a></td>
+<td>🟠 AI製品・サービスの開発、提供、利用組織を対象にする。<br><a href="https://www.iso.org/standard/81230.html">ISO public page: What is ISO/IEC 42001? / low</a></td>
+<td>🔵 AI関連リスクと機会を管理する枠組みとして説明される。<br><a href="https://www.iso.org/standard/81230.html">ISO public page: Benefits / low</a></td>
+<td>🔵 透明性、トレーサビリティ、信頼性を利点として掲げる。<br><a href="https://www.iso.org/standard/81230.html">ISO public page: Benefits / low</a></td>
+<td>❔ 監査ログ・記録要求は本文未取得で評価未了。<br><a href="https://www.iso.org/standard/81230.html">not assessed; standard text unavailable / low</a></td>
+<td>❔ 人間監督の具体要求は本文未取得で評価未了。<br><a href="https://www.iso.org/standard/81230.html">not assessed; standard text unavailable / low</a></td>
+<td>❔ データ品質・バイアス要求は本文未取得で評価未了。<br><a href="https://www.iso.org/standard/81230.html">not assessed; standard text unavailable / low</a></td>
+<td>❔ PCCP・市販後管理相当の条項は評価未了。<br><a href="https://www.iso.org/standard/81230.html">not assessed; standard text unavailable / low</a></td>
+<td>🔵 方針、目的、プロセスによる責任あるAI管理を扱う。<br><a href="https://www.iso.org/standard/81230.html">ISO public page: FAQ; AIMS definition / low</a></td>
+<td>❔ 同意・プライバシー要求は本文未取得で評価未了。<br><a href="https://www.iso.org/standard/81230.html">not assessed; standard text unavailable / low</a></td>
+<td>❔ セキュリティ要求は本文未取得で評価未了。<br><a href="https://www.iso.org/standard/81230.html">not assessed; standard text unavailable / low</a></td>
+<td>❔ 臨床評価要求は本文未取得で評価未了。<br><a href="https://www.iso.org/standard/81230.html">not assessed; standard text unavailable / low</a></td>
+<td>🔵 AI管理システムの国際標準として位置づけられる。<br><a href="https://www.iso.org/standard/81230.html">ISO public page: General information / low</a></td>
+<td>🟠 AIMSの確立、実施、維持、継続的改善を要求する。<br><a href="https://www.iso.org/standard/81230.html">ISO public page: What is ISO/IEC 42001? / low</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/jmsf-ai-medical/">日本医師会 AIの臨床利用答申</a></td>
+<td>🔵 医療AIの臨床利用全般と医師・患者・AIの関係を対象にする。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=1">第1章 総論：医療AIの現状と課題 / medium</a></td>
+<td>🔵 臨床利用を3類型に分け、悪用や制度的リスクも整理する。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=68">第3章 3.3.1 AIの臨床利用の3類型 / medium</a></td>
+<td>🟠 AI使用の患者通知、透明性措置、医師確認を重視する。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=69">第3章 3.3.2 記録・文書作成の補助 / medium</a></td>
+<td>🔵 エラー報告、データ保存、AIモニタリングの必要性に触れる。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=69">第3章 3.3.2; 第2章 2.8.7 / low</a></td>
+<td>🟠 医師参加型原則により医師が確認し最終判断を行う。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53">第3章 3.1.2 WMAが示す医師参加型原則 / medium</a></td>
+<td>🟠 バイアス、データセットシフト、精度劣化への注意を求める。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=71">第3章 3.3.3 診断・治療の補助 / medium</a></td>
+<td>🔵 展開後の能力維持やAIによるAI監視を課題に挙げる。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=51">第2章 2.8.7 さいごに / low</a></td>
+<td>🟠 医師、開発者、行政を含む責任分担の必要性を示す。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=72">第3章 3.3.3 診断・治療の補助 / medium</a></td>
+<td>🟠 機微な診療情報の機密性、不正アクセス防止、同意を重視する。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=54">第3章 3.1.2 WMAが示す医師参加型原則 / medium</a></td>
+<td>🟠 診療情報の情報セキュリティとAI攻撃対策を慎重に検討する。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53">第3章 3.1.1 はじめに; 第2章 2.8.4 / medium</a></td>
+<td>🔵 診断・治療補助では性能、透明性、医師判断への影響を検討する。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=70">第3章 3.3.3 診断・治療の補助 / medium</a></td>
+<td>🔵 WMA声明、日本AI法、国際倫理と国内戦略の整合を整理する。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=53">第3章 3.1 医療AIを巡る国際倫理と日本の戦略 / medium</a></td>
+<td>🔵 医師会の継続的関与と新たなガバナンス体制を求める。<br><a href="https://www.med.or.jp/dl-med/teireikaiken/20260415_3.pdf#page=56">第3章 3.1.4 まとめ; 第2章 2.8.7 / medium</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/meti-ai-guidelines/">経済産業省 AI事業者ガイドライン</a></td>
+<td>🟠 AI開発者、提供者、利用者を主対象にする。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第1部 2. 対象 / high</a></td>
+<td>🟠 危害の大きさと蓋然性に応じたリスクベース対応を重視。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第1部 はじめに; リスクベースアプローチ / high</a></td>
+<td>🟠 ステークホルダーへの情報提供で透明性を高める。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第2部 B. 6) 透明性 / high</a></td>
+<td>🟠 判断過程、判断根拠等のログ記録・保存を求める。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第2部 B. 6) 透明性 / high</a></td>
+<td>🟠 人間中心の考え方に基づく開発・提供・利用を求める。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第2部 A. 基本理念; B. 1) 人間中心 / high</a></td>
+<td>🟠 データの正確性・最新性と回避不能なバイアス認識を求める。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第2部 B. 2) 安全性; 3) 公平性 / high</a></td>
+<td>🟠 ライフサイクル全体でリスク対策と環境変化対応を行う。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第1部 はじめに; 第2部 B. 共通の指針 / high</a></td>
+<td>🟠 各主体の役割に応じ合理的範囲で説明責任を果たす。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第2部 B. 7) アカウンタビリティ / high</a></td>
+<td>🟠 個人情報保護法等を踏まえプライバシー保護を検討する。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第2部 B. 4) プライバシー保護 / high</a></td>
+<td>🟠 不正操作や外部攻撃に備えセキュリティを確保する。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第2部 B. 5) セキュリティ確保 / high</a></td>
+<td>⚪ 医療AI固有の臨床評価要求は本編確認範囲で扱いなし。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">本編確認範囲; 医療固有臨床評価なし / medium</a></td>
+<td>🔵 NIST、ISO、EU AI法等の海外原則・標準を参照する。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第1部 はじめに; 第2部 B. 6) 透明性 / high</a></td>
+<td>🟠 AIライフサイクル全体で自主的な対策実行を促す。<br><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf">第1部 はじめに; 第2部 B. 共通の指針 / high</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/mhlw-samd/">厚労省 医療機器プログラムに関する取扱い</a></td>
+<td>🔴 医療目的と生命健康リスクで医療機器プログラム該当性を判断。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">1 はじめに / 2(1) 医療機器プログラムの範囲 / high</a></td>
+<td>🔴 クラスIからIVとGHTFルールでリスク程度を判定。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">6 人の生命及び健康に影響を与えるリスクの程度の考え方 / high</a></td>
+<td>🟠 非医療機器表示や根拠の検証可能性で誤認防止を求める。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">5(1) 事前準備 / 8(1) 標ぼうの留意事項 / high</a></td>
+<td>🔵 個人健康記録の収集・ログ作成は非該当例として言及。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">4(3) 使用者が自らの医療・健康情報を閲覧等するプログラム / high</a></td>
+<td>🔵 医療関係者の管理下かを使用者分類で確認。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">5(1) 事前準備（使用目的、処理方法などの明確化・整理） / high</a></td>
+<td>🟠 根拠情報とアルゴリズム妥当性の検証可能性を整理。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">5(1) 判断のために明確にすべき項目の例示 / high</a></td>
+<td>⚪ PCCPや市販後監視の明示的扱いは確認できず。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">全文確認（該当記述なし） / medium</a></td>
+<td>🟠 事業者・開発者が使用者、目的、処理方法を確認整理。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">5(1) 事前準備 / 8(2) 適正使用のための周知啓発 / high</a></td>
+<td>🔵 個人健康記録の保存・共有例はあるが同意義務は未確認。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">4(3) 使用者が自らの医療・健康情報を閲覧等するプログラム / high</a></td>
+<td>⚪ セキュリティ要求の明示的扱いは確認できず。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">全文確認（該当記述なし） / medium</a></td>
+<td>🔵 治験・臨床研究での提供と適用関係に言及。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">7 臨床研究等における取扱いについて / high</a></td>
+<td>🔵 GHTF分類を用い、IMDRF分類因子は参考可能と記載。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">6 人の生命及び健康に影響を与えるリスクの程度の考え方 脚注11 / high</a></td>
+<td>🔵 規制範囲は今後変更可能で、適正使用周知にも言及。<br><a href="https://www.mhlw.go.jp/content/11120000/001082227.pdf">2(2) 基本的考え方 / 8(2) 適正使用のための周知啓発 / high</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/nist-ai-rmf/">NIST AIリスクマネジメントフレームワーク</a></td>
+<td>🟠 AIの設計・開発・利用・評価で信頼性リスク管理を促す。<br><a href="https://www.nist.gov/itl/ai-risk-management-framework#main-content">Overview of the AI RMF / high</a></td>
+<td>🟠 文脈に応じてリスク許容度、優先度、影響を評価する。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=32">Section 3; MAP 4-5; MANAGE 1 / high</a></td>
+<td>🟠 透明性、説明可能性、解釈可能性を信頼性特性に含める。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=35">Section 4; MEASURE 2.8 / high</a></td>
+<td>🟠 文書化、インベントリ、来歴、監視結果の記録を求める。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=20">GOVERN 1.5-1.6; MEASURE 2.8 / high</a></td>
+<td>🟠 人間判断とHuman-AI構成の役割を明確化する。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=30">GOVERN 3.2; MAP 3.4 / high</a></td>
+<td>🟠 公平性、有害バイアス、データ代表性を測定・管理する。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=23">Section 4; MEASURE 2.11 / high</a></td>
+<td>🟠 展開後監視、改善、事故・エラー連絡を管理機能に含める。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=38">MANAGE 4.1-4.3 / high</a></td>
+<td>🟠 役割、責任、説明責任メカニズムを組織に求める。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=28">GOVERN 2.1-2.3; Section 3.4 / high</a></td>
+<td>🟠 プライバシー強化と同意等の生成AIプライバシーリスクを扱う。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=24">GAI Risks: Data Privacy; MEASURE 2.10 / high</a></td>
+<td>🟠 セキュアでレジリエントなAIと情報セキュリティを評価する。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=21">GAI Risks: Information Security; MEASURE 2.7 / high</a></td>
+<td>🟠 TEVV、妥当性、信頼性、性能限界を測定・文書化する。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=34">MEASURE 2.1-2.6 / high</a></td>
+<td>🔵 他のリスク管理努力との整合と国際的利用を意図する。<br><a href="https://www.nist.gov/itl/ai-risk-management-framework#main-content">Overview of the AI RMF; AIRC / high</a></td>
+<td>🟠 Govern/Map/Measure/ManageをAIライフサイクル全体に適用する。<br><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf#page=26">Section 5; Tables 1-4 / high</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/pmda-samd/">PMDA SaMD情報ページ</a></td>
+<td>🔴 PMD法上の医療目的かつ重大リスクのソフトウェアを対象化。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#classfication">Determination Whether Software Qualifies as a Medical Device / high</a></td>
+<td>🔵 承認審査情報として医療機器分類や申請区分への参照あり。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents">Approval review / Marketing Approval Review / high</a></td>
+<td>❔ Lane Aでは透明性要求の評価未了。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents">未評価（Lane A） / low</a></td>
+<td>❔ Lane Aでは監査ログ要求の評価未了。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents">未評価（Lane A） / low</a></td>
+<td>❔ Lane Aでは人の監督要求の評価未了。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents">未評価（Lane A） / low</a></td>
+<td>❔ Lane Aではデータ品質・バイアス要求の評価未了。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents">未評価（Lane A） / low</a></td>
+<td>🔵 再評価・再審査の臨床研究相談への言及あり。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation">PMDA Consultation on SaMD / high</a></td>
+<td>🔵 製造販売業者からの相談申込みを前提に助言提供。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation">PMDA Consultation on SaMD / high</a></td>
+<td>❔ Lane Aでは同意・プライバシー要求の評価未了。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents">未評価（Lane A） / low</a></td>
+<td>❔ Lane Aではセキュリティ要求の評価未了。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#contents">未評価（Lane A） / low</a></td>
+<td>🟠 治験相談で承認申請上の評価充足性を確認。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#consultation">PMDA Consultation on SaMD / high</a></td>
+<td>🔵 国際調和、DASH 2の国際展開、Science Board資料に言及。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#dash">Software as a Medical Device / DASH for SaMD 2 / high</a></td>
+<td>🔵 最新情報更新、審査ポイント整備、相談体制強化に言及。<br><a href="https://www.pmda.go.jp/english/review-services/reviews/0009.html#dash">Review Points for SaMD / Initiatives to Promote Practical Use of SaMD / high</a></td>
+</tr>
+<tr>
+<td><a href="../guidelines/who-aih/">WHO AI for Health倫理・ガバナンス</a></td>
+<td>🔵 医療AI全般とLMMの医療・公衆衛生利用を対象にする。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=13">Overview; 2021 guidance / high</a></td>
+<td>🔵 LMMではリスクベース枠組みと規制負荷差に言及。<br><a href="https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=65">Section 5, Assessment of general-purpose foundation models and/or applications used in health care / high</a></td>
+<td>🟠 透明性・説明可能性・理解可能性を中核原則に置く。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=42">Executive summary; Section 5 / high</a></td>
+<td>🟠 LMMでは第三者監査、影響評価、公開を求める。<br><a href="https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=18">Sections 4.2, 5.2, 6.4 / high</a></td>
+<td>🟠 医療判断は人間が管理し、人間監督点を設ける。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=41">Executive summary; Protecting human autonomy / high</a></td>
+<td>🟠 低品質・非代表データとバイアスの最小化を重視する。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=44">Executive summary; inclusiveness and equity / high</a></td>
+<td>🔵 実使用中の継続的評価とリリース後監査に触れる。<br><a href="https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=72">Section 6.2; deployment responsibilities / medium</a></td>
+<td>🟠 責任と説明責任、被害救済、価値連鎖上の責任を求める。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=44">Executive summary; responsibility and accountability / high</a></td>
+<td>🟠 プライバシー、機密性、有効な同意、データ保護を要求する。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=41">Executive summary; Protecting human autonomy / high</a></td>
+<td>🔵 安全性とサイバーセキュリティ上のリスクを扱う。<br><a href="https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=18">Sections 4.2, 5.2; cybersecurity risks / high</a></td>
+<td>🟠 安全性、正確性、有効性、性能証明を重視する。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=42">Executive summary; human well-being and safety / high</a></td>
+<td>🟠 LMMと医療AIの国際的な協調ガバナンスを求める。<br><a href="https://iris.who.int/server/api/core/bitstreams/e9e62c65-6045-481e-bd04-20e206bc5039/content#page=78">Section 8; International governance of LMMs / high</a></td>
+<td>🟠 設計、導入、実使用中の継続評価を求める。<br><a href="https://iris.who.int/server/api/core/bitstreams/f780d926-4ae3-42ce-a6d6-e898a5562621/content#page=46">Executive summary; responsive and sustainable / high</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>License / 引用スコープ</strong>: 本サイトのオリジナル編集物 (マトリクス構造・要求強度判定・列定義・要約) は CC-BY 4.0。第三者ガイドライン原文の引用は各権利者帰属 (fair use / 著作権法第32条「引用」の範囲) で、CC-BY 対象外。詳細は <a href="https://github.com/cursorvers/medical-ai-governance-crosswalk/blob/main/LICENSE">LICENSE</a> 参照。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
