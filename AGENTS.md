@@ -1,4 +1,4 @@
-# CLAUDE.md -- medical-paper-governance (medgov)
+# AGENTS.md -- medical-paper-governance (medgov)
 
 Medical AI Governance Crosswalk: cited requirement-level matrix across 10 international
 guidelines x 13 governance columns. Targets AI USERS (clinicians, clinical researchers,
